@@ -24,6 +24,7 @@ const App = () => {
       <NavBar cookies = {cookies}/>
       <Routes>
         <Route exact path='/' element={<Landing/>} />
+        <Route exact path='/schedule' element={<Landing/>}/>
         <Route exact path='/register' element={<Register/>}/>
         <Route exact path='/findclasses' element={<FindClasses/>}/>
       </Routes>

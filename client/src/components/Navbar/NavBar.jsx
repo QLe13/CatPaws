@@ -12,7 +12,7 @@ function NavBar(props) {
     <nav className="navbar">
       <ul className="navbar__menu">
         <li className="navbar__menu-item"><a href="/">User Info</a></li>
-        <li className="navbar__menu-item"><a href="/">Schedule</a></li>
+        <li className="navbar__menu-item"><a href="/schedule">Schedule</a></li>
         <li className="navbar__menu-item"><a href="/register">Registration</a></li>
         <li className="navbar__menu-item"><a href="/findclasses">Find Classes</a></li>
         <li className="navbar__menu-item"><a href="/" onClick={()=>deleteCookies(props.cookies)}>Log out</a></li> 
