@@ -1,20 +1,14 @@
-import React from 'react'
-import Cookies from 'universal-cookie'
-import './App.css'
-import { Auth } from './components'
-
-const authToken = false
+import React, { useContext, useState } from 'react'
+import Landing from './components/Landing/Landing'
 
 const App = () => {
-
-    if(!authToken){
-        return <Auth/>
-    }
   return (
-    <div className='app__wrapper'>
-      <h1>Huhhhh ur in me!</h1>
+    <div>
+      <Landing/>
     </div>
   )
 }
 
 export default App
+
+

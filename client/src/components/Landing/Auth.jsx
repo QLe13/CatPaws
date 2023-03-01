@@ -2,26 +2,27 @@ import React from 'react'
 import { useState } from 'react'
 import Cookies from 'universal-cookie'
 import axios from 'axios'
+import './Auth.css'
 
 const initialState = {
     username:'',
     password:''
 }
 
-const Auth = () => {
+const Auth = ({curUser, setUser}) => {
 
     const [form,setForm] = useState(initialState)
     const handleChange = (event) => {
         setForm({...form, [event.target.name]:event.target.value})
-        
     }
     const handleSubmit = async (event) =>{
         event.preventDefault()
         //prevent the page reloading
         const URL = 'http://localhost:4500/auth'
         const {data, stats} = await axios.post(`${URL}/login`,form)
-        console.log(data)
-        console.log(stats)
+        const userName = data.username
+        curUser = data.data.username
+        setUser(curUser)
     }
   return (
     <div className='auth__form-container'>
