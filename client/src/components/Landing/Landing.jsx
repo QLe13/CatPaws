@@ -1,13 +1,8 @@
 import React, { useContext, useState } from 'react'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Cookies from 'universal-cookie'
-import Auth from './Auth';
-import NavBar from '../Navbar/NavBar'
 import SchedulingPage from '../SchedulingPage/SchedulingPage';
 
 
 
-const cookies = new Cookies()
 
 
 //This is the login page for our application
@@ -44,11 +39,7 @@ const Landing = () => {
       hours: "3"
     }
   ];
-  const [curUser, setUser] = useState(cookies.get('curUser')||'')// Put the login token here
-  const setUserState = (newUser) => {
-    setUser(newUser);
-    cookies.set('curUser',newUser)
-  }; 
+  
 
   const [curSem, setSem] = useState('fall') //current semester, we use this curSem useState to switch between semester
   const switchSem = (curr, button) => {
@@ -57,14 +48,9 @@ const Landing = () => {
     }
   }
 
-  //if authentication is successful, the authToken (or userID will be initialized and then we will make query based on that token)
-    if(!curUser){
-        return <Auth curUser={curUser} setUser ={setUserState}/>
-    }
 
   return (
     <div>
-    <NavBar cookies = {cookies}/>
     <div className='schedule__form-container_fields-content'>
         <div className='schedule__form-container_fields-content_button'onClick={()=>switchSem(curSem,'fall')}>
             <button>Fall 2022</button>
