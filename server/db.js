@@ -40,5 +40,5 @@ const connection_URL = 'mongodb+srv://qle1:u1o8sg86B4HH4AFW@cluster.o3qa9c4.mong
 
 mongoose.connect(connection_URL).then(()=>{console.log(`DBServer Running`)})
 
-module.exports = {Class,User, mongoose}
+module.exports = {Class,User}
 

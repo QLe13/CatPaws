@@ -1,6 +1,6 @@
 const express = require('express')
 const cors = require('cors')
-const {Class, User, mongoose} = require('./db')
+const {Class, User} = require('./db')
 
 const dummyUsers = [
     { uid: 1, username: 'user1', password: 'password1' },
