@@ -18,11 +18,16 @@ const Auth = ({curUser, setUser}) => {
     const handleSubmit = async (event) =>{
         event.preventDefault()
         //prevent the page reloading
-        const URL = 'http://localhost:4500/auth'
-        const {data, stats} = await axios.post(`${URL}/login`,form)
-        const userName = data.username
-        curUser = data.data.username
-        setUser(curUser)
+        const URL = 'http://localhost:4500'
+        const ans = await axios.post(`${URL}/login`,form)
+        if(ans.data.status){
+            curUser = ans.data.username
+            setUser(curUser)
+            console.log(curUser)
+        }else{
+            window.alert("Username or password is incorrect!")
+        }
+
     }
   return (
     <div className='auth__form-container'>
