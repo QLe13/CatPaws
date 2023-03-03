@@ -1,9 +1,11 @@
 import React from 'react'
+import DropdownMenu from './DropdownMenu'
 
 const FindClasses = () => {
+  const classes = ['CS', 'COMM', 'ECON','MATH']
   return (
     <div>
-      <h1>Find Classes Page</h1>
+      <DropdownMenu items = {classes}/>
     </div>
   )
 }
