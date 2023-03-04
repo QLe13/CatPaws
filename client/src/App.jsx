@@ -10,7 +10,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 const cookies = new Cookies()
 const App = () => {
-  const [curUser, setUser] = useState(cookies.get('curUser')||'')// Put the login token here
+  const [curUser, setUser] = useState(cookies.get('curUser')||null)// Put the login token here
   const setUserState = (newUser) => {
     setUser(newUser);
     cookies.set('curUser',newUser)
@@ -23,10 +23,10 @@ const App = () => {
   <Router>
       <NavBar cookies = {cookies}/>
       <Routes>
-        <Route exact path='/' element={<Landing/>} />
-        <Route exact path='/schedule' element={<Landing/>}/>
-        <Route exact path='/register' element={<Register/>}/>
-        <Route exact path='/findclasses' element={<FindClasses/>}/>
+        <Route exact path='/' element={<Landing user = {curUser}/>} />
+        <Route exact path='/schedule' element={<Landing user = {curUser}/>}/>
+        <Route exact path='/register' element={<Register user = {curUser}/>}/>
+        <Route exact path='/findclasses' element={<FindClasses user = {curUser}/>}/>
       </Routes>
   </Router>
     </div>

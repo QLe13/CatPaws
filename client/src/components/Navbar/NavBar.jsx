@@ -1,11 +1,9 @@
 import React from 'react';
-import './auth.css';
-import Cookies from 'universal-cookie';
+import './nav.css';
 
 function NavBar(props) {
   const deleteCookies = (cookies) =>{
     cookies.remove('curUser')
-    return
   }
 
   return (
