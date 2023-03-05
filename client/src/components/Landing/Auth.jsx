@@ -1,6 +1,5 @@
 import React from 'react'
 import { useState } from 'react'
-import Cookies from 'universal-cookie'
 import axios from 'axios'
 import './Auth.css'
 
@@ -20,10 +19,9 @@ const Auth = ({curUser, setUser}) => {
         //prevent the page reloading
         const URL = 'http://localhost:4500'
         const ans = await axios.post(`${URL}/login`,form)
-        if(ans.data.status){
-            curUser = ans.data.username
-            setUser(curUser)
-            console.log(curUser)
+        if(ans){
+            setUser(ans)
+            console.log(ans)
         }else{
             window.alert("Username or password is incorrect!")
         }

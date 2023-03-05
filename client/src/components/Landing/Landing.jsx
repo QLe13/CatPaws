@@ -6,7 +6,7 @@ import SchedulingPage from '../SchedulingPage/SchedulingPage';
 
 
 //This is the login page for our application
-const Landing = () => {
+const Landing = (props) => {
   const classesFall = [
     {
       courseId: "CSCI-2320",
