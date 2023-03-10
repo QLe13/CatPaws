@@ -15,6 +15,7 @@
   }
   
   .navbar__menu {
+    list-style: none;
     display: flex;
     width: 100%;
     align-items: center;
@@ -34,3 +35,22 @@
     color: var(--primary-color-alpha);
   }
   
+  .navbar__menu-item a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .navbar__menu-item a:hover {
+    background-color: darkblue;
+  }
+
+  .navbar__menu-item a.selected {
+    background-color: grey;
+  }
