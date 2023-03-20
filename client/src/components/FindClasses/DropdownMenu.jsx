@@ -13,7 +13,7 @@ const DropdownMenu = (props) => {
     props.form.level = selectedLevel;
     props.form.time = selectedDays;
     props.form.pathway = selectedPathway;
-  });
+  },[selectedSubject,selectedLevel,selectedDays,selectedPathway]);
 
   const handleSubjectSelection = (event) => {
     setSelectedSubject(event.target.value);
