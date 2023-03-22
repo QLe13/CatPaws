@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import BasicRTable from "./BasicRTable";
 import { Component } from "react";
 import RegisterDropdown from "./RegisterDropdown";
+import CheckForm from "./CheckForm";
 
 //<Row Selection />
 
@@ -48,12 +49,18 @@ const Register = ({classes}) => {
             <RegisterDropdown form={form}/>
             <div className='dropdown-container'>
             <div className='dropdown-container-button' onClick={()=>handleSubmitForm(form)}><button>Register</button></div>
-            */
-            }
+            
+          <label htmlFor="check">
+            Checkbox:<input type="checkbox" name="haha" style={{display:'inline-block'}} onChange={handleOnChange}/>
+          </label>
+          </div>
+          */}
+          <h1>Register for Classes</h1>
+          <CheckForm/>
 
-            <label>
-                Checkbox:<input type="checkbox" id="check" name="check1"/>
-            </label>
+          <div>
+            <button>Register</button>
+          </div>
         </div>
     )
 }
