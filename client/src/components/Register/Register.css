@@ -1,0 +1,41 @@
+.register__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}  
+.register__table {
+  margin: 2rem auto;
+  max-width: 900px;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.register__table th,
+.register__table td {
+  border: 1px solid black;
+  padding: 0.5rem;
+  text-align: left;
+  border: 1px solid var(--primary-color-alpha);
+}
+
+.register__table th {
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: var(--primary-color-alpha);
+  color: black;
+}
+
+.register__table td {
+  background-color: #f9f9f9;
+  color: #555;
+}
+
+.register__table td:first-child {
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .register__table {
+    font-size: 0.8rem;
+  }
+}

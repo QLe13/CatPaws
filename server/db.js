@@ -36,7 +36,7 @@ const userSchema = new Schema({
 const Class = mongoose.model('Class', classSchema);
 const User = mongoose.model('User', userSchema);
 
-const connection_URL = 'mongodb+srv://qle1:u1o8sg86B4HH4AFW@cluster.o3qa9c4.mongodb.net/?retryWrites=true&w=majority'
+const connection_URL = 'mongodb+srv://dmowen:dmowen@cluster0.duqpq2q.mongodb.net/?retryWrites=true&w=majority'
 
 mongoose.connect(connection_URL).then(()=>{console.log(`DBServer Running`)})
 
