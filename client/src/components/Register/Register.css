@@ -39,3 +39,14 @@
     font-size: 0.8rem;
   }
 }
+
+
+.topping {
+  margin-top: 0.3rem;
+  vertical-align: text-bottom;
+  color: #555
+}
+
+.result {
+  margin-top: 1rem;
+}

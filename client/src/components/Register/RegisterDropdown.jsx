@@ -22,7 +22,7 @@ const RegisterDropdown = (props) => {
         <table className='dropdown-table'>
         <tbody>
             <tr>
-            <th>Select Class to Register</th>
+            <th>Select Class</th>
             </tr>
             <tr>
             <td>
@@ -34,6 +34,9 @@ const RegisterDropdown = (props) => {
                 <option value='' disabled>
                     Select a class
                 </option>
+
+                {// saveddata needs to be replaced with the list of saved classes from the database keep in mind this is imported from an external classes.js file
+                 }
                 {saveddata.map((item) => (
                     <option key={item} value={item}>
                     {item}

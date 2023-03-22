@@ -1,5 +1,6 @@
-import React from "react";
+import React, {useState} from "react";
 import BasicRTable from "./BasicRTable";
+import { Component } from "react";
 import RegisterDropdown from "./RegisterDropdown";
 
 //<Row Selection />
@@ -7,6 +8,7 @@ import RegisterDropdown from "./RegisterDropdown";
 const form = { savedclasses:''}
 const Register = ({classes}) => {
 
+    // example data needs to be replaced with data from the database
     const saved = [
         {
           courseId: "CSCI-2320",
@@ -25,10 +27,33 @@ const Register = ({classes}) => {
       ];
 
     
+
+    const handleSubmitForm = async (form) =>{
+        console.log(form)
+        //The form object will be sent to the backend, the backend should be able to handle the request and return a list of classes
+        //This function will be used to send the post request to the backend to receive a list of classess object that will be passed into the tabular object of classes
+    }
+
+
+    const [isChecked, setIsChecked] = useState(false);
+
+    const handleOnChange = () => {
+      setIsChecked(!isChecked);
+    };
+
     return (
         <div>
-            <BasicRTable saved = {saved}/> 
-            <RegisterDropdown form={form}/>       
+            {/*
+            <BasicRTable saved = {saved}/>
+            <RegisterDropdown form={form}/>
+            <div className='dropdown-container'>
+            <div className='dropdown-container-button' onClick={()=>handleSubmitForm(form)}><button>Register</button></div>
+            */
+            }
+
+            <label>
+                Checkbox:<input type="checkbox" id="check" name="check1"/>
+            </label>
         </div>
     )
 }
