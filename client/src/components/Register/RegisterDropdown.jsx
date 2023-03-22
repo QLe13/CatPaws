@@ -1,12 +1,12 @@
 import React, { useState, useEffect} from 'react';
 import './RegisterDrop.css';
-import saveddata from "./classes"
+import {saveddata} from "./classes"
 
 const RegisterDropdown = (props) => {
     const [selectedClass, setSelectedClass] = useState(null);
 
   useEffect(() => {
-    props.form.classes = selectedClass;
+    props.form.savedclasses = selectedClass;
 
   },[selectedClass]);
 

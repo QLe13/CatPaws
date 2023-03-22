@@ -4,7 +4,7 @@ import RegisterDropdown from "./RegisterDropdown";
 
 //<Row Selection />
 
-const form = { classes:''}
+const form = { savedclasses:''}
 const Register = ({classes}) => {
 
     const saved = [
