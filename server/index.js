@@ -3,9 +3,9 @@ const cors = require('cors')
 const { Class, User } = require('./db')
 
 const dummyUsers = [
-  { uid: 1, username: 'user1', password: 'password1' },
-  { uid: 2, username: 'user2', password: 'password2' },
-  { uid: 3, username: 'user3', password: 'password3' },
+  { uid: 1, username: 'user1', password: 'password1',isTeacher: false },
+  { uid: 2, username: 'user2', password: 'password2',isTeacher: true },
+  { uid: 3, username: 'user3', password: 'password3',isTeacher: false },
 ];
 const init = async () => {
   try {
@@ -47,6 +47,7 @@ app.post('/login', async (req, res) => {
   try {
     const { username, password } = req.body;
     const user = await User.findOne({ username, password });
+    //The return type of findOne is a mongoose object.
     if (user) {
       res.status(200).json(user);
     } else {

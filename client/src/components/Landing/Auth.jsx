@@ -8,7 +8,7 @@ const initialState = {
     password:''
 }
 
-const Auth = ({curUser, setUser}) => {
+const Auth = ({setUser}) => {
 
     const [form,setForm] = useState(initialState)
     const handleChange = (event) => {
@@ -21,7 +21,7 @@ const Auth = ({curUser, setUser}) => {
         const ans = await axios.post(`${URL}/login`,form)
         if(ans){
             setUser(ans)
-            console.log(ans)
+            //console.log(ans.data.isTeacher)
         }else{
             window.alert("Username or password is incorrect!")
         }
