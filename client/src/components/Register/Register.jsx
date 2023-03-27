@@ -27,40 +27,21 @@ const Register = ({classes}) => {
         }
       ];
 
-    
-
-    const handleSubmitForm = async (form) =>{
-        console.log(form)
-        //The form object will be sent to the backend, the backend should be able to handle the request and return a list of classes
-        //This function will be used to send the post request to the backend to receive a list of classess object that will be passed into the tabular object of classes
-    }
-
-
-    const [isChecked, setIsChecked] = useState(false);
-
-    const handleOnChange = () => {
-      setIsChecked(!isChecked);
-    };
-
     return (
         <div>
-            {/*
-            <BasicRTable saved = {saved}/>
-            <RegisterDropdown form={form}/>
-            <div className='dropdown-container'>
-            <div className='dropdown-container-button' onClick={()=>handleSubmitForm(form)}><button>Register</button></div>
-            
-          <label htmlFor="check">
-            Checkbox:<input type="checkbox" name="haha" style={{display:'inline-block'}} onChange={handleOnChange}/>
-          </label>
-          </div>
-          */}
-          <h1>Register for Classes</h1>
-          <CheckForm/>
-
-          <div>
-            <button>Register</button>
-          </div>
+            <div className="register_container">
+            <h1>Register for Classes</h1>
+            </div>
+            <BasicRTable />        
+            <div className="register_container">
+            <div className="register-container-button">
+              <button>Register</button>
+            </div>
+            <div className="register-container-button">
+              <button>Remove</button>
+            </div>
+      
+        </div>
         </div>
     )
 }

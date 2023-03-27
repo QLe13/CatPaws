@@ -41,12 +41,28 @@
 }
 
 
-.topping {
-  margin-top: 0.3rem;
-  vertical-align: text-bottom;
-  color: #555
+.register-container-button {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: flex-start;
 }
 
-.result {
-  margin-top: 1rem;
+.register-container-button button {
+  border-radius: 4px;
+  background: #9cb3db;
+  border: 1px solid;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  padding: 0.7rem 1.2rem;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.register_container {
+  width: fit-content;
+  margin: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
