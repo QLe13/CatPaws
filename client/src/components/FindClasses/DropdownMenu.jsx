@@ -14,6 +14,7 @@ const DropdownMenu = (props) => {
     props.form.time = selectedDays;
     props.form.pathway = selectedPathway;
   },[selectedSubject,selectedLevel,selectedDays,selectedPathway]);
+  // What does this useEffect do? It updates the form object in the FindClasses component
 
   const handleSubjectSelection = (event) => {
     setSelectedSubject(event.target.value);

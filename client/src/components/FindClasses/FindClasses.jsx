@@ -1,4 +1,5 @@
 import React from 'react'
+import ClassesFound from './ClassesFound'
 import DropdownMenu from './DropdownMenu'
 import './DropdownMenu.css'
 
@@ -18,6 +19,9 @@ const FindClasses = (props) => {
         </div>
       <div className='result-header'>
         <h1>Available Classes</h1>
+      </div>
+      <div>
+        <ClassesFound></ClassesFound>
       </div>
     </div>
   )

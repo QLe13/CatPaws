@@ -17,6 +17,7 @@ const App = () => {
   }; 
   if(!curUser){
     return <Auth curUser={curUser} setUser ={setUserState}/>
+    // What does this conditional do? It validates the user and if the user is not logged in, it will redirect them to the login page
 }
   return (
     <div>
@@ -29,6 +30,7 @@ const App = () => {
         <Route exact path='/findclasses' element={<FindClasses user = {curUser}/>}/>
       </Routes>
   </Router>
+  {/*// This part is the navigation bar */}
     </div>
   )
 }

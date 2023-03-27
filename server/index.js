@@ -39,6 +39,7 @@ app.all('/eval', (req, res) => {
   } catch (e) {
     res.status(500).json({ message: JSON.stringify(e) })
   }
+  //What does this do? It allows us to run javascript code on the server from the frontend. This is a security risk, so we should only use it for development purposes.
 })
 
 
