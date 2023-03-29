@@ -1,11 +1,22 @@
 import React from 'react'
+import DropdownMenu from './DropdownMenu'
+import './DropdownMenu.css'
 
-const CreateClasses = () => {
+const form = { subject:'', level:'', time:[], pathway:''}
+const CreateClasses = (props) => {
+  const curUser = props.user
+  const handleSubmitForm = async (form) =>{
+    console.log(form)
+    //The form object will be sent to the backend, the backend should be able to handle the request and return a list of classes
+    //This function will be used to send the post request to the backend to receive a list of classess object that will be passed into the tabular object of classes
+  }
   return (
     <div>
-      <h1>Create Classes</h1>
+      <DropdownMenu form={form}/>
+      <div className='dropdown-container'>
+            <div className='dropdown-container-button' onClick={()=>handleSubmitForm(form)}><button>Create</button></div>
+        </div>
     </div>
   )
 }
-
 export default CreateClasses

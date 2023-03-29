@@ -15,7 +15,7 @@ const NavBar=({cookies, isTeacher})=> {
           <a href="/schedule">Schedule</a>
         </li>
         <li className="navbar__menu-item">
-          <a href={!isTeacher?"/findclasses":"createclasses"}>{!isTeacher?"Find Classes":"Create Classes"}</a>
+          <a href="createclasses">Create Classes</a>
         </li>
         <li className="navbar__menu-item">
           <a href="/register">Registration</a>
