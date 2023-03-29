@@ -1,0 +1,109 @@
+{
+   uid: 1,
+   username: 'user1',
+   password: 'password1',
+   isTeacher: false,
+   classes: ['CSCI-1300', 'CSCI-1304', 'CSCI-1311', 'CSCI-2323'],
+   enrolled: ['CSCI-1300', 'CSCI-1304'],
+   waitlisted: ['CSCI-1311'],
+   saved: ['CSCI-2323']
+}
+
+{
+   uid: 2,
+   username: 'user2',
+   password: 'password2',
+   isTeacher: false,
+   classes: ['CSCI-1311', 'CSCI-1320', 'CSCI-2321', 'CSCI-3343'],
+   enrolled: ['CSCI-1311', 'CSCI-1320'],
+   waitlisted: ['CSCI-2321'],
+   saved: ['CSCI-3343']
+}
+
+{
+   uid: 3,
+   username: 'user3',
+   password: 'password3',
+   isTeacher: false,
+   classes: ['CSCI-1300', 'CSCI-1312', 'CSCI-2322', 'CSCI-3321'],
+   enrolled: ['CSCI-1300', 'CSCI-1312'],
+   waitlisted: ['CSCI-2322'],
+   saved: ['CSCI-3321']
+}
+
+{
+   uid: 4,
+   username: 'user4',
+   password: 'password4',
+   isTeacher: false,
+   classes: ['CSCI-1304', 'CSCI-1311', 'CSCI-1323', 'CSCI-3322'],
+   enrolled: ['CSCI-1304', 'CSCI-1311'],
+   waitlisted: ['CSCI-1323'],
+   saved: ['CSCI-3322']
+}
+
+{
+   uid: 5,
+   username: 'user5',
+   password: 'password5',
+   isTeacher: false,
+   classes: ['CSCI-1300', 'CSCI-1311', 'CSCI-1321', 'CSCI-3311'],
+   enrolled: ['CSCI-1300', 'CSCI-1311'],
+   waitlisted: ['CSCI-1321'],
+   saved: ['CSCI-3311']
+}
+
+{
+   uid: 6,
+   username: 'user6',
+   password: 'password6',
+   isTeacher: false,
+   classes: ['CSCI-1300', 'CSCI-1311', 'CSCI-1320', 'CSCI-3354'],
+   enrolled: ['CSCI-1300', 'CSCI-1311'],
+   waitlisted: ['CSCI-1320'],
+   saved: ['CSCI-3354']
+}
+
+{
+   uid: 7,
+   username: 'user7',
+   password: 'password7',
+   isTeacher: false,
+   classes: ['CSCI-1304', 'CSCI-1311', 'CSCI-2320', 'CSCI-3344'],
+   enrolled: ['CSCI-1304', 'CSCI-1311'],
+   waitlisted: ['CSCI-2320'],
+   saved: ['CSCI-3344']
+}
+
+{
+   uid: 8,
+   username: 'user8',
+   password: 'password8',
+   isTeacher: false,
+   classes: ['CSCI-1300', 'CSCI-1311', 'CSCI-2323', 'CSCI-3361'],
+   enrolled: ['CSCI-1300', 'CSCI-1311'],
+   waitlisted: ['CSCI-2323'],
+   saved: ['CSCI-3361']
+}
+
+{
+   uid: 9,
+   username: 'user9',
+   password: 'password9',
+   isTeacher: false,
+   classes: ['CSCI-1304', 'CSCI-1312', 'CSCI-1320', 'CSCI-3366'],
+   enrolled: ['CSCI-1304', 'CSCI-1312'],
+   waitlisted: ['CSCI-1320'],
+   saved: ['CSCI-3366']
+}
+
+{
+   uid: 10,
+   username: 'user10',
+   password: 'password10',
+   isTeacher: false,
+   classes: ['CSCI-1300', 'CSCI-1311', 'CSCI-1323', 'CSCI-3351'],
+   enrolled: ['CSCI-1300', 'CSCI-1311'],
+   waitlisted: ['CSCI-1323'],
+   saved: ['CSCI-3351']
+}
