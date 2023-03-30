@@ -1,0 +1,109 @@
+{
+   uid: 11,
+   username: 'teacher1',
+   password: 't_password1',
+   isTeacher: true,
+   classes: ['CSCI-1300', 'CSCI-1304'],
+   enrolled: [],
+   waitlisted: [],
+   saved: []
+}
+
+{
+   uid: 12,
+   username: 'teacher2',
+   password: 't_password2',
+   isTeacher: true,
+   classes: ['CSCI-1311', 'CSCI-1312'],
+   enrolled: [],
+   waitlisted: [],
+   saved: []
+}
+
+{
+   uid: 13,
+   username: 'teacher3',
+   password: 't_password3',
+   isTeacher: true,
+   classes: ['CSCI-1320', 'CSCI-1321'],
+   enrolled: [],
+   waitlisted: [],
+   saved: []
+}
+
+{
+   uid: 14,
+   username: 'teacher4',
+   password: 't_password4',
+   isTeacher: true,
+   classes: ['CSCI-1323', 'CSCI-2094'],
+   enrolled: [],
+   waitlisted: [],
+   saved: []
+}
+
+{
+   uid: 15,
+   username: 'teacher5',
+   password: 't_password5',
+   isTeacher: true,
+   classes: ['CSCI-2195', 'CSCI-2320'],
+   enrolled: [],
+   waitlisted: [],
+   saved: []
+}
+
+{
+   uid: 16,
+   username: 'teacher6',
+   password: 't_password6',
+   isTeacher: true,
+   classes: ['CSCI-2321', 'CSCI-2322'],
+   enrolled: [],
+   waitlisted: [],
+   saved: []
+}
+
+{
+   uid: 17,
+   username: 'teacher7',
+   password: 't_password7',
+   isTeacher: true,
+   classes: ['CSCI-2323', 'CSCI-2324'],
+   enrolled: [],
+   waitlisted: [],
+   saved: []
+}
+
+{
+   uid: 18,
+   username: 'teacher8',
+   password: 't_password8',
+   isTeacher: true,
+   classes: ['CSCI-3090', 'CSCI-3094'],
+   enrolled: [],
+   waitlisted: [],
+   saved: []
+}
+
+{
+   uid: 19,
+   username: 'teacher9',
+   password: 't_password9',
+   isTeacher: true,
+   classes: ['CSCI-3190', 'CSCI-3193'],
+   enrolled: [],
+   waitlisted: [],
+   saved: []
+}
+
+{
+   uid: 20,
+   username: 'teacher10',
+   password: 't_password10',
+   isTeacher: true,
+   classes: ['CSCI-3194', 'CSCI-3195'],
+   enrolled: [],
+   waitlisted: [],
+   saved: []
+}
