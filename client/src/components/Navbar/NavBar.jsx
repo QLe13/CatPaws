@@ -18,9 +18,6 @@ const NavBar=({cookies, isTeacher})=> {
           <a href="createclasses">Create Classes</a>
         </li>
         <li className="navbar__menu-item">
-          <a href="/register">Registration</a>
-        </li>
-        <li className="navbar__menu-item">
           <a href="/" onClick={() => deleteCookies(cookies)}>Log out</a>
         </li> 
         {/* We can make the log out button double confirmation about logging out later on */}

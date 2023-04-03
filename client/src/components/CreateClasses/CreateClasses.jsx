@@ -1,6 +1,6 @@
 import React from 'react'
-import DropdownMenu from './DropdownMenu'
-import './DropdownMenu.css'
+import DropdownMenu from './CreateClassMenu'
+import './CreateClassMenu.css'
 
 const form = { subject:'', level:'', time:[], pathway:''}
 const CreateClasses = (props) => {
