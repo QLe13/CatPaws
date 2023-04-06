@@ -1,12 +1,8 @@
-import React, { useContext, useState } from 'react'
+import React, { useState } from 'react';
 import SchedulingPage from '../SchedulingPage/SchedulingPage';
+import './landing.css';
 
-
-
-
-
-//This is the login page for our application
-const Landing = (props) => {
+const Landing = () => {
   const classesFall = [
     {
       courseId: "CSCI-2320",
@@ -23,6 +19,7 @@ const Landing = (props) => {
       hours: "3"
     }
   ];
+
   const classesSpring = [
     {
       courseId: "CSCI-2321",
@@ -39,31 +36,34 @@ const Landing = (props) => {
       hours: "3"
     }
   ];
-  
 
-  const [curSem, setSem] = useState('fall') //current semester, we use this curSem useState to switch between semester
-  const switchSem = (curr, button) => {
-    if(button !== curr){
-        setSem(button)
+  const [curSem, setSem] = useState('fall');
+
+  const switchSem = (semester) => {
+    if (semester !== curSem) {
+      setSem(semester);
     }
   }
 
-
   return (
-    <div>
-    <div className='schedule__form-container_fields-content'>
-        <div className='schedule__form-container_fields-content_button'onClick={()=>switchSem(curSem,'fall')}>
-            <button>Fall 2022</button>
-            </div>
-        <div className='schedule__form-container_fields-content_button'onClick={()=>switchSem(curSem,'spring')}>
-            <button>Spring 2023</button>
-            </div>
+    <div className="landing">
+      <div className="landing__buttons">
+        <button
+          className={`landing__button ${curSem === 'fall' ? 'landing__button--active' : ''}`}
+          onClick={() => switchSem('fall')}
+        >
+          Fall 2022
+        </button>
+        <button
+          className={`landing__button ${curSem === 'spring' ? 'landing__button--active' : ''}`}
+          onClick={() => switchSem('spring')}
+        >
+          Spring 2023
+        </button>
+      </div>
+      <SchedulingPage classes={curSem === 'fall' ? classesFall : classesSpring} />
     </div>
-    <SchedulingPage classes={curSem==='fall' ? classesFall : classesSpring}/>
-    </div>
-  )
+  );
 }
 
-
-export default Landing
-
+export default Landing;
