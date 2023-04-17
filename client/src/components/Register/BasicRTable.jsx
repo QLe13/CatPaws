@@ -8,22 +8,17 @@ const BasicRTable = ({ saved }) => {
     <table className="register__table">
       <thead>
         <tr>
+          <th>Register</th>
           <th>Course ID</th>
           <th>Course Name</th>
           <th>Meeting Time</th>
           <th>Location</th>
           <th>Hours</th>
-          <th>Register</th>
         </tr>
       </thead>
       <tbody>
         {examplesaved.map(({ courseId, courseName, meetingTime, location, hours }, index) => (
           <tr key={index}>
-            <td>{courseId}</td>
-            <td>{courseName}</td>
-            <td>{meetingTime}</td>
-            <td>{location}</td>
-            <td>{hours}</td>
             <td>            
               <input
                     type="checkbox"
@@ -31,7 +26,12 @@ const BasicRTable = ({ saved }) => {
                     name={courseName}
                     value={courseId}
                     style={{display:'inline-block'}}
-              /></td>
+              /></td> 
+            <td>{courseId}</td>
+            <td>{courseName}</td>
+            <td>{meetingTime}</td>
+            <td>{location}</td>
+            <td>{hours}</td>
           </tr>
         ))}
       </tbody>
