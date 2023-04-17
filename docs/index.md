@@ -1,12 +1,16 @@
 # CSpace - Project Description
 
-The goal of this project is to create a lightweight and easy to use software for class registration in a higher education setting.  
+The goal of this project is to create a lightweight and easy to use software for class registration in a higher education setting. By restricting the scope to our client's requirements, we can create a reliable service that avoids unnecessary feature bloating. 
 
-### Features
-
-Wow! More filler text. Documentation coming soon!
+There are a number of existing services that we will take positive and negative inspiration from. Examples include Trinity University's TigerPaws and the Texas public-school service Skyward. However, these applications contain a number of issues that we will seek to avoid. These include:
+1. Unintuitive or unattractive user interfaces.
+2. Unnecessary features that either slow down the software or confuse users.
+3. 
 
 # Requirements
+
+### Original Client Requirements:
+A website that allows students to search and register for classes, administrators to add/delete classes, and students to view their current classes.
 
 ### Functional Requirements:
 1. Student Registration: The system should allow students to register for classes, view their class schedules, and drop or add courses.
@@ -21,6 +25,12 @@ Wow! More filler text. Documentation coming soon!
 5. Accessibility: The system should be accessible to users with disabilities.
 6. Scalability: The system should be scalable, able to handle a growing number of users and courses.
 
+# Tech Stack
+
+React - Frontend for dynamic pages
+ExpressJS - Web application framework
+NodeJS - Server functionality
+Firebase - Backend / database management
 
 # Installation Guide
 
