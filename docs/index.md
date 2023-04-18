@@ -43,6 +43,16 @@ Navigate to the /server folder.
 Run npm install express dotenv nodemon cors mongoose.
 Run npm run dev.
 
+# User Guide
+
+Upon opening the application, a user will see a login window. After submiting their username and password, the user will be brought to either the student interface or teacher interface. See guides of each below.
+
+### Student User
+
+A student user will be brought to their landing page, where they will see the classes that they are currently taking. By clicking the buttons above the table, they will be able to switch between classes for the current semester and classes for the next semester.
+
+### Teacher User
+
 # Modifications from the Client
 
 ### Client Meeting One
