@@ -1,0 +1,91 @@
+[  
+  {"name": "Low-Level Computing",    
+    "class_id": "CSCI-1120",
+    "instructor": "teacher1",
+    "enrolled_students": ["user1"],
+    "waitlisted_students": ["user4"],
+    "time": "9:00 AM",
+    "location": "Classroom A101"
+  },
+  {
+    "name": "Essential Information Technology",
+    "class_id": "CSCI-1300",
+    "instructor": "teacher2",
+    "enrolled_students": [],
+    "waitlisted_students": ["user1"],
+    "time": "10:30 AM",
+    "location": "Classroom B202"
+  },
+  {
+    "name": "Computers and Society",
+    "class_id": "CSCI-1304",
+    "instructor": "teacher3",
+    "enrolled_students": ["user2"],
+    "waitlisted_students": [],
+    "time": "8:15 AM",
+    "location": "Classroom C303"
+  },
+  {
+    "name": "Introduction to Programming Logic",
+    "class_id": "CSCI-1311",
+    "instructor": "teacher4",
+    "enrolled_students": ["user3"],
+    "waitlisted_students": [],
+    "time": "11:00 AM",
+    "location": "Classroom D104"
+  },
+  {
+    "name": "Introduction to Programming for Engineering",
+    "class_id": "CSCI-1312",
+    "instructor": "teacher5",
+    "enrolled_students": ["user4"],
+    "waitlisted_students": [],
+    "time": "9:45 AM",
+    "location": "Classroom E205"
+  },
+  {
+    "name": "Principles of Computer Science I",
+    "class_id": "CSCI-1320",
+    "instructor": "teacher6",
+    "enrolled_students": ["user5"],
+    "waitlisted_students": [],
+    "time": "10:15 AM",
+    "location": "Classroom F306"
+  },
+  {
+    "name": "Principles of Computer Science II",
+    "class_id": "CSCI-1321",
+    "instructor": "teacher7",
+    "enrolled_students": ["user6"],
+    "waitlisted_students": [],
+    "time": "8:30 AM",
+    "location": "Classroom G107"
+  },
+  {
+    "name": "Discrete Structures",
+    "class_id": "CSCI-1323",
+    "instructor": "teacher8",
+    "enrolled_students": ["user7"],
+    "waitlisted_students": [],
+    "time": "11:30 AM",
+    "location": "Classroom H208"
+  },
+  {
+    "name": "Computer Science Colloquium",
+    "class_id": "CSCI-2094",
+    "instructor": "teacher9",
+    "enrolled_students": ["user8"],
+    "waitlisted_students": [],
+    "time": "9:30 AM",
+    "location": "Classroom I309"
+  },
+  {
+    "name": "Competitive Programming",
+    "class_id": "CSCI-2195",
+    "instructor": "teacher10",
+    "enrolled_students": ["user9"],
+    "waitlisted_students": [],
+    "time": "8:45 AM",
+    "location": "Classroom J110"
+  }
+]
