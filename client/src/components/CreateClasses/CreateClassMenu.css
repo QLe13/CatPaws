@@ -121,3 +121,11 @@ input[type="checkbox"]:checked + .checkbox-custom {
 option {
   color: #000;
 }
+
+.dropdown-container2 {
+  width: 500px;
+  margin: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}

@@ -111,6 +111,32 @@ const DropdownMenu = (props) => {
         </tbody>
         </table>
         </div>
+        <div className='dropdown-container'>
+        <table className='dropdown-table'>
+        <tbody>
+          <tr>
+            <th>Description</th>
+            <th>Meeting Times</th>
+          </tr>
+          <tr>
+            <td>
+            <div className="auth__form-container_fields-content_input2">
+                    <input 
+                        placeholder="Course Description"
+                    />
+            </div>
+            </td>
+            <td>
+            <div className="auth__form-container_fields-content_input2">
+                    <input 
+                        placeholder="Meeting Times"
+                    />
+            </div>
+            </td>
+          </tr>
+        </tbody>
+        </table>
+        </div>
     </div>
 
   );
