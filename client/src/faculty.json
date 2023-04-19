@@ -1,0 +1,103 @@
+[
+    {
+      "uid": 11,
+      "username": "teacher1",
+      "password": "tpassword1",
+      "isTeacher": true,
+      "classes": ["CSCI-3321", "CSCI-3322"],
+      "enrolled": [],
+      "waitlisted": [],
+      "saved": []
+    },
+    {
+      "uid": 12,
+      "username": "teacher2",
+      "password": "tpassword2",
+      "isTeacher": true,
+      "classes": ["CSCI-3323"],
+      "enrolled": [],
+      "waitlisted": [],
+      "saved": []
+    },
+    {
+      "uid": 13,
+      "username": "teacher3",
+      "password": "tpassword3",
+      "isTeacher": true,
+      "classes": ["CSCI-3334", "CSCI-3342", "CSCI-3343"],
+      "enrolled": [],
+      "waitlisted": [],
+      "saved": []
+    },
+    {
+      "uid": 14,
+      "username": "teacher4",
+      "password": "tpassword4",
+      "isTeacher": true,
+      "classes": ["CSCI-3344", "CSCI-3345"],
+      "enrolled": [],
+      "waitlisted": [],
+      "saved": []
+    },
+    {
+      "uid": 15,
+      "username": "teacher5",
+      "password": "tpassword5",
+      "isTeacher": true,
+      "classes": ["CSCI-3351"],
+      "enrolled": [],
+      "waitlisted": [],
+      "saved": []
+    },
+    {
+      "uid": 16,
+      "username": "teacher6",
+      "password": "tpassword6",
+      "isTeacher": true,
+      "classes": ["CSCI-3353", "CSCI-3354", "CSCI-3361"],
+      "enrolled": [],
+      "waitlisted": [],
+      "saved": []
+    },
+    {
+      "uid": 17,
+      "username": "teacher7",
+      "password": "tpassword7",
+      "isTeacher": true,
+      "classes": ["CSCI-3362", "CSCI-3366"],
+      "enrolled": [],
+      "waitlisted": [],
+      "saved": []
+    },
+    {
+      "uid": 18,
+      "username": "teacher8",
+      "password": "tpassword8",
+      "isTeacher": true,
+      "classes": ["CSCI-3368"],
+      "enrolled": [],
+      "waitlisted": [],
+      "saved": []
+    },
+    {
+      "uid": 19,
+      "username": "teacher9",
+      "password": "tpassword9",
+      "isTeacher": true,
+      "classes": ["CSCI-3390", "CSCI-3393", "CSCI-3394"],
+      "enrolled": [],
+      "waitlisted": [],
+      "saved": []
+    },
+    {
+      "uid": 20,
+      "username": "teacher10",
+      "password": "tpassword10",
+      "isTeacher": true,
+      "classes": ["CSCI-3395", "CSCI-3396"],
+      "enrolled": [],
+      "waitlisted": [],
+      "saved": []
+    }
+]
+  
