@@ -1,0 +1,160 @@
+[
+  {
+    "uid": "1",
+    "username": "user1",
+    "password": "password1",
+    "classes": [
+      "classes/spring2023/CSCI-1120",
+      "classes/fall2022/CSCI-1300",
+      "classes/fall2022/CSCI-1304",
+      "classes/fall2022/CSCI-1311"
+    ],
+    "waitlisted": [
+      "classes/spring2023/CSCI-1300"
+    ],
+    "saved": [
+      "classes/fall2023/CSCI-1304",
+      "classes/fall2023/CSCI-1311"
+    ]
+  },
+  {
+    "uid": "2",
+    "username": "user2",
+    "password": "password2",
+    "classes": [
+      "classes/spring2023/CSCI-1312",
+      "classes/fall2022/CSCI-1320"
+    ],
+    "waitlisted": [
+      "classes/spring2023/CSCI-1320"
+    ],
+    "saved": []
+  },
+  {
+    "uid": "3",
+    "username": "user3",
+    "password": "password3",
+    "classes": [
+      "classes/spring2023/CSCI-1321",
+      "classes/spring2023/CSCI-1323",
+      "classes/fall2022/CSCI-2094",
+      "classes/fall2022/CSCI-2195",
+      "classes/fall2022/CSCI-2320"
+    ],
+    "waitlisted": [],
+    "saved": [
+      "classes/fall2023/CSCI-2094",
+      "classes/fall2023/CSCI-2195",
+      "classes/fall2023/CSCI-2320"
+    ]
+  },
+  {
+    "uid": "4",
+    "username": "user4",
+    "password": "password4",
+    "classes": [
+      "classes/spring2023/CSCI-2321",
+      "classes/fall2022/CSCI-2322"
+    ],
+    "waitlisted": [],
+    "saved": [
+      "classes/fall2023/CSCI-2322"
+    ]
+  },
+  {
+    "uid": "5",
+    "username": "user5",
+    "password": "password5",
+    "classes": [
+      "classes/spring2023/CSCI-2323",
+      "classes/fall2022/CSCI-2324",
+      "classes/fall2022/CSCI-3090"
+    ],
+    "waitlisted": [
+      "classes/spring2023/CSCI-2324"
+    ],
+    "saved": [
+      "classes/fall2023/CSCI-3090"
+    ]
+  },
+  {
+    "uid": "6",
+    "username": "user6",
+    "password": "password6",
+    "classes": [
+      "classes/spring2023/CSCI-3094",
+      "classes/fall2022/CSCI-3190",
+      "classes/fall2022/CSCI-3193"
+    ],
+    "waitlisted": [],
+    "saved": [
+      "classes/fall2023/CSCI-3190",
+      "classes/fall2023/CSCI-3193"
+    ]
+  },
+  {
+    "uid": "7",
+    "username": "user7",
+    "password": "password7",
+    "classes": [
+      "classes/spring2023/CSCI-3194",
+      "classes/fall2022/CSCI-3195"
+    ],
+    "waitlisted": [],
+    "saved": [
+      "classes/fall2023/CSCI-3195"
+    ]
+  },
+  {
+    "uid": "8",
+    "username": "user8",
+    "password": "password8",
+    "classes": [
+      "classes/spring2023/CSCI-3196",
+      "classes/fall2022/CSCI-3197",
+      "classes/fall2022/CSCI-3215"
+    ],
+    "waitlisted": [
+      "classes/spring2023/CSCI-3197"
+    ],
+    "saved": [
+      "classes/fall2023/CSCI-3215"
+    ]
+  },
+  {
+    "uid": "9",
+    "username": "user9",
+    "password": "password9",
+    "classes": [
+      "classes/spring2023/CSCI-3290",
+      "classes/spring2023/CSCI-3293",
+      "classes/fall2022/CSCI-3294",
+      "classes/fall2022/CSCI-3295"
+    ],
+    "waitlisted": [],
+    "saved": [
+      "classes/fall2023/CSCI-3294",
+      "classes/fall2023/CSCI-3295"
+    ]
+  },
+  {
+    "uid": "10",
+    "username": "user10",
+    "password": "password10",
+    "classes": [
+      "classes/spring2023/CSCI-3296",
+      "classes/fall2022/CSCI-3297",
+      "classes/fall2022/CSCI-3311",
+      "classes/fall2022/CSCI-3312",
+      "classes/fall2022/CSCI-3320"
+    ],
+    "waitlisted": [
+      "classes/spring2023/CSCI-3297"
+    ],
+    "saved": [
+      "classes/fall2023/CSCI-3311",
+      "classes/fall2023/CSCI-3312",
+      "classes/fall2023/CSCI-3320"
+    ]
+  }
+]
