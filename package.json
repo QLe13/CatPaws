@@ -1,5 +1,9 @@
 {
 	"dependencies": {
 		"firebase-admin": "^11.6.0"
+	},
+	"scripts": {
+		"build": "cd client && npm run build",
+		"deploy": "npm run build && firebase deploy"
 	}
 }

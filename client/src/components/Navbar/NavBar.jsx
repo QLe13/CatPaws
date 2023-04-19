@@ -1,11 +1,9 @@
 import React from 'react';
 import './nav.css';
+import { signOut } from 'firebase/auth';
+import { auth } from '../../firebase';
 
-const NavBar = ({ cookies, isTeacher }) => {
-  const deleteCookies = (cookies) => {
-    cookies.remove('curUser')
-  };
-  
+const NavBar = ({ isTeacher }) => {
   return (
     <nav className="navbar">
       <ul className="navbar__menu">
@@ -22,7 +20,12 @@ const NavBar = ({ cookies, isTeacher }) => {
           <a href="/register">Registration</a>
         </li>
         <li className="navbar__menu-item">
-          <a href="/" onClick={() => deleteCookies(cookies)}>Log out</a>
+          <a href="/" onClick={() => {
+            signOut(auth)
+            .then(() => {
+              window.location.reload();
+            })
+          }}>Log out</a>
         </li>
       </ul>
     </nav>

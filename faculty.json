@@ -4,8 +4,8 @@
     "username": "teacher1",
     "password": "tpassword1",
     "classes": [
-      "classes/spring2022/CSCI-3321",
-      "classes/spring2022/CSCI-3322"
+      "classes/spring2023/CSCI-3321",
+      "classes/spring2023/CSCI-3322"
     ]
   },
   {
@@ -13,7 +13,7 @@
     "username": "teacher2",
     "password": "tpassword2",
     "classes": [
-      "classes/spring2022/CSCI-3323"
+      "classes/spring2023/CSCI-3323"
     ]
   },
   {
@@ -21,9 +21,9 @@
     "username": "teacher3",
     "password": "tpassword3",
     "classes": [
-      "classes/spring2022/CSCI-3334",
-      "classes/spring2022/CSCI-3342",
-      "classes/spring2022/CSCI-3343"
+      "classes/spring2023/CSCI-3334",
+      "classes/spring2023/CSCI-3342",
+      "classes/spring2023/CSCI-3343"
     ]
   },
   {
@@ -31,8 +31,8 @@
     "username": "teacher4",
     "password": "tpassword4",
     "classes": [
-      "classes/spring2022/CSCI-3344",
-      "classes/spring2022/CSCI-3345"
+      "classes/spring2023/CSCI-3344",
+      "classes/spring2023/CSCI-3345"
     ]
   },
   {
@@ -40,7 +40,7 @@
     "username": "teacher5",
     "password": "tpassword5",
     "classes": [
-      "classes/spring2022/CSCI-3351"
+      "classes/spring2023/CSCI-3351"
     ]
   },
   {
@@ -48,9 +48,9 @@
     "username": "teacher6",
     "password": "tpassword6",
     "classes": [
-      "classes/spring2022/CSCI-3353",
-      "classes/spring2022/CSCI-3354",
-      "classes/spring2022/CSCI-3361"
+      "classes/spring2023/CSCI-3353",
+      "classes/spring2023/CSCI-3354",
+      "classes/spring2023/CSCI-3361"
     ]
   },
   {
@@ -58,8 +58,8 @@
     "username": "teacher7",
     "password": "tpassword7",
     "classes": [
-      "classes/spring2022/CSCI-3362",
-      "classes/spring2022/CSCI-3366"
+      "classes/spring2023/CSCI-3362",
+      "classes/spring2023/CSCI-3366"
     ]
   },
   {
@@ -67,7 +67,7 @@
     "username": "teacher8",
     "password": "tpassword8",
     "classes": [
-      "classes/spring2022/CSCI-3368"
+      "classes/spring2023/CSCI-3368"
     ]
   },
   {
@@ -75,9 +75,9 @@
     "username": "teacher9",
     "password": "tpassword9",
     "classes": [
-      "classes/spring2022/CSCI-3390",
-      "classes/spring2022/CSCI-3393",
-      "classes/spring2022/CSCI-3394"
+      "classes/spring2023/CSCI-3390",
+      "classes/spring2023/CSCI-3393",
+      "classes/spring2023/CSCI-3394"
     ]
   },
   {
@@ -85,8 +85,8 @@
     "username": "teacher10",
     "password": "tpassword10",
     "classes": [
-      "classes/spring2022/CSCI-3395",
-      "classes/spring2022/CSCI-3396"
+      "classes/spring2023/CSCI-3395",
+      "classes/spring2023/CSCI-3396"
     ]
   }
 ]
