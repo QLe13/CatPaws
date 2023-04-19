@@ -1,0 +1,23 @@
+{
+    "spring": {
+        "start": "1970-00-11",
+        "end": "1970-04-15",
+        "registration": false,
+        "special-registration": false,
+        "add-drop": false
+    },
+    "summer": {
+        "start": "1970-04-24",
+        "end": "1970-06-11",
+        "registration": false,
+        "special-registration": false,
+        "add-drop": false
+    },
+    "fall": {
+        "start": "1970-07-22",
+        "end": "1970-11-19",
+        "registration": true,
+        "special-registration": false,
+        "add-drop": false
+    }
+}
