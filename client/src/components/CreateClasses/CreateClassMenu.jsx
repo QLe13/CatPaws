@@ -55,14 +55,14 @@ const DropdownMenu = (props) => {
             </tr>
             <tr>
             <td>
-            <div className="auth__form-container_fields-content_input">
+            <div className="containter">
                     <input 
                         placeholder="Course Name"
                     />
             </div>
             </td>
             <td>
-            <div className="auth__form-container_fields-content_input">
+            <div className="containter">
                     <input 
                         placeholder="Course Number"
                     />
@@ -101,7 +101,7 @@ const DropdownMenu = (props) => {
                 </select>
             </td>
             <td>
-            <div className="auth__form-container_fields-content_input">
+            <div className="containter">
                     <input 
                         placeholder="Term"
                     />
@@ -120,14 +120,14 @@ const DropdownMenu = (props) => {
           </tr>
           <tr>
             <td>
-            <div className="auth__form-container_fields-content_input2">
+            <div className="containter2">
                     <input 
                         placeholder="Course Description"
                     />
             </div>
             </td>
             <td>
-            <div className="auth__form-container_fields-content_input2">
+            <div className="containter2">
                     <input 
                         placeholder="Meeting Times"
                     />
