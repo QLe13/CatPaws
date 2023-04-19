@@ -1,12 +1,15 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import SchedulingPage from '../SchedulingPage/SchedulingPage';
 import './landing.css';
+import { collection, doc, getDoc, getDocs, query, where } from "firebase/firestore/lite";
+import { db, auth } from "../../firebase";
 
 type LandingProps = {
   user: User | null
 }
 
 const Landing = ({user}: LandingProps) => {
+
   const classesFall = [
     {
       courseId: "CSCI-2320",
@@ -49,6 +52,43 @@ const Landing = ({user}: LandingProps) => {
     }
   }
 
+
+  const [springclasses, setSpringClasses] = useState<Class[]>([]);
+
+  const [form, setForm] = useState({
+    semester: 'spring',
+  });
+
+  useEffect(() => {
+    const fetchSavedClasses = async () => {
+      if (user) { // Check if 'user' is not 'null'
+        const springClasses = (
+          await Promise.all(user.classes.map((s) => getDoc(doc(db, s))))
+        ).map((d) => d.data()) as Class[];
+        setSpringClasses(springClasses);
+      }
+    };
+    fetchSavedClasses();
+  }, [form]);
+
+  const [fallclasses, setFallClasses] = useState<Class[]>([]);
+
+  const [form1, setForm1] = useState({
+    semester: 'fall',
+  });
+
+  useEffect(() => {
+    const fetchSavedClasses = async () => {
+      if (user) { // Check if 'user' is not 'null'
+        const fallClasses = (
+          await Promise.all(user.classes.map((s) => getDoc(doc(db, s))))
+        ).map((d) => d.data()) as Class[];
+        setFallClasses(fallClasses);
+      }
+    };
+    fetchSavedClasses();
+  }, [form1]);
+
   return (
     <div className="landing">
       <div className="landing__buttons">
@@ -65,7 +105,7 @@ const Landing = ({user}: LandingProps) => {
           Spring 2023
         </button>
       </div>
-      <SchedulingPage classes={curSem === 'fall' ? classesFall : classesSpring} />
+      <SchedulingPage classes={curSem === 'fall' ? fallclasses : springclasses} />
     </div>
   );
 }
