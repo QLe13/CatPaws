@@ -17,3 +17,13 @@ declare type UserData = {
     waitlisted: string[];
     saved: string[];
 }
+declare type Class = {
+    name: string;
+    class_id: string;
+    instructor: string;
+    enrolled: string[];
+    waitlisted: string[];
+    time: string;
+    location: string;
+    credits: number;
+}

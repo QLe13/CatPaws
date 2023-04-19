@@ -17,7 +17,7 @@ const BasicRTable = ({ saved }) => {
         </tr>
       </thead>
       <tbody>
-        {examplesaved.map(({ courseId, courseName, meetingTime, location, hours }, index) => (
+        {saved.map(({ courseId, courseName, meetingTime, location, hours }, index) => (
           <tr key={index}>
             <td>            
               <input
