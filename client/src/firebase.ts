@@ -1,8 +1,8 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 // import { getAnalytics } from "firebase/analytics";
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
-import { getAuth, onAuthStateChanged, GoogleAuthProvider, EmailAuthProvider } from "firebase/auth";
+import { getFirestore } from 'firebase/firestore/lite';
+import { getAuth, GoogleAuthProvider } from "firebase/auth";
 
 export const googleProvider = new GoogleAuthProvider();
 googleProvider.addScope('https://www.googleapis.com/auth/calendar');
@@ -11,8 +11,6 @@ googleProvider.addScope('https://www.googleapis.com/auth/gmail.insert');
 googleProvider.setCustomParameters({
     'login_hint': 'user@trinity.edu'
 });
-
-export const emailProvider = new EmailAuthProvider();
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries

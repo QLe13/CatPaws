@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 import SchedulingPage from '../SchedulingPage/SchedulingPage';
 import './landing.css';
 
-const Landing = () => {
+type LandingProps = {
+  user: User | null
+}
+
+const Landing = ({user}: LandingProps) => {
   const classesFall = [
     {
       courseId: "CSCI-2320",
