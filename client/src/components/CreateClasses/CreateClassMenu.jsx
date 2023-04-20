@@ -116,7 +116,6 @@ const DropdownMenu = (props) => {
         <tbody>
           <tr>
             <th>Description</th>
-            <th>Meeting Times</th>
           </tr>
           <tr>
             <td>
@@ -126,10 +125,35 @@ const DropdownMenu = (props) => {
                     />
             </div>
             </td>
+          </tr>
+          <tr>
+            <th>Meeting Times</th>
+          </tr>
+          <tr>
             <td>
-            <div className="containter2">
+            <div className="containter">
                     <input 
-                        placeholder="Meeting Times"
+                        placeholder="Monday Time"
+                    />
+            </div>
+            <div className="containter">
+                    <input 
+                        placeholder="Tuesday Time"
+                    />
+            </div>
+            <div className="containter">
+                    <input 
+                        placeholder="Wednesday Time"
+                    />
+            </div>
+            <div className="containter">
+                    <input 
+                        placeholder="Thursday Time"
+                    />
+            </div>
+            <div className="containter">
+                    <input 
+                        placeholder="Friday Time"
                     />
             </div>
             </td>
