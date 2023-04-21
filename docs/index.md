@@ -7,7 +7,10 @@ There are a number of existing services that we will take positive and negative 
 2. Unnecessary features that either slow down the software or confuse users.
 3. 
 
-# Requirements
+
+<details>
+
+  <summary>Requirements</summary>
 
 ### Original Client Requirements:
 A website that allows students to search and register for classes, administrators to add/delete classes, and students to view their current classes.
@@ -24,7 +27,8 @@ A website that allows students to search and register for classes, administrator
 4. Usability: The system should be easy to use and intuitive, with clear instructions and help resources available for users.
 5. Accessibility: The system should be accessible to users with disabilities.
 6. Scalability: The system should be scalable, able to handle a growing number of users and courses.
-
+</details>
+  
 # Tech Stack
 
 React - Frontend for dynamic pages
@@ -57,6 +61,7 @@ A student user will be brought to their landing page, where they will see the cl
 
 1. Firebase install sometimes provides access issues. This seems to be a MacOS issue.
 2. There seems to be conversion issues from typescript to React. This is either a Firebase or MacOS issue.
+
 
 # Modifications from the Client
 
