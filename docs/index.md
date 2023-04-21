@@ -53,6 +53,11 @@ A student user will be brought to their landing page, where they will see the cl
 
 ### Teacher User
 
+# Current Issues
+
+1. Firebase install sometimes provides access issues. This seems to be a MacOS issue.
+2. There seems to be conversion issues from typescript to React. This is either a Firebase or MacOS issue.
+
 # Modifications from the Client
 
 ### Client Meeting One
