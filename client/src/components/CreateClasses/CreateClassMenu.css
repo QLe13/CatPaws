@@ -56,8 +56,8 @@
   
   .dropdown-container-button button {
     border-radius: 4px;
-    background: #db9c9c;
-    border: 1px solid #ff0000;
+    background: #9cb3db;
+
     color: #fff;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 500;
@@ -67,9 +67,7 @@
     transition: 0.3s ease;
   }
   
-  .dropdown-container-button button:hover {
-    background: maroon;
-  }
+
   
   .checkbox-container {
     display: flex;
@@ -98,8 +96,8 @@
   }
   
   input[type="checkbox"]:checked + .checkbox-custom {
-    background-color: #3f51b5;
-    border-color: #3f51b5;
+    background-color: #5D3FD3;
+    border-color: #5D3FD3;
   }
   
   option {
@@ -124,7 +122,7 @@
   
   .containter label {
     margin-bottom: 0.45rem;
-    color: rgb(230, 40, 30);
+    color: #5D3FD3;
     font-size: 12px;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 0.7px;
@@ -175,7 +173,7 @@
   }
   .containter2 label {
     margin-bottom: 0.45rem;
-    color: rgb(230, 40, 30);
+    color: #5D3FD3;
     font-size: 12px;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 0.7px;
