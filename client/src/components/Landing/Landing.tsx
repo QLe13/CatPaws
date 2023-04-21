@@ -3,6 +3,7 @@ import SchedulingPage from '../SchedulingPage/SchedulingPage';
 import './landing.css';
 import { collection, doc, getDoc, getDocs, query, where } from "firebase/firestore/lite";
 import { db, auth } from "../../firebase";
+import { getCurSemester } from '../../utils';
 
 type LandingProps = {
   user: User | null
@@ -46,6 +47,14 @@ const Landing = ({user}: LandingProps) => {
 
   const [curSem, setSem] = useState('fall');
 
+  useEffect(() => {
+    const fetchSemester = async () => {
+      const curSemester = await getCurSemester();
+      setSem(curSemester);
+    };
+    fetchSemester();
+  }, []);
+
   const switchSem = (semester) => {
     if (semester !== curSem) {
       setSem(semester);
@@ -54,10 +63,6 @@ const Landing = ({user}: LandingProps) => {
 
 
   const [springclasses, setSpringClasses] = useState<Class[]>([]);
-
-  const [form, setForm] = useState({
-    semester: 'spring',
-  });
 
   useEffect(() => {
     const fetchSavedClasses = async () => {
@@ -69,13 +74,9 @@ const Landing = ({user}: LandingProps) => {
       }
     };
     fetchSavedClasses();
-  }, [form]);
+  }, []);
 
   const [fallclasses, setFallClasses] = useState<Class[]>([]);
-
-  const [form1, setForm1] = useState({
-    semester: 'fall',
-  });
 
   useEffect(() => {
     const fetchSavedClasses = async () => {
@@ -87,7 +88,7 @@ const Landing = ({user}: LandingProps) => {
       }
     };
     fetchSavedClasses();
-  }, [form1]);
+  }, []);
 
   return (
     <div className="landing">

@@ -3,7 +3,7 @@ const { initializeApp } = require('firebase-admin/app');
 const { getAuth } = require('firebase-admin/auth');
 const { getFirestore } = require('firebase-admin/firestore');
 // service account key
-const serviceAccount = require("../cspace-51bd4-9fa84e8e1f8a.json");
+const serviceAccount = require("../cspace-51bd4-9c0a63be7d7f.json");
 const app = initializeApp({ credential: admin.credential.cert(serviceAccount) });
 const db = getFirestore(app);
 const auth = getAuth(app);
@@ -15,10 +15,10 @@ async function main() {
     const users = db.collection('users');
     for (const student of students_json) {
         const { uid, username, password, classes, waitlisted, saved } = student;
-        await auth.createUser({ uid, email: username + '@example.com', password, displayName: username }).catch((error) => {
+        /* await auth.createUser({ uid, email: username + '@example.com', password, displayName: username }).catch((error) => {
             console.error('Error creating new user: ', error);
             throw error;
-        });
+        }); */
         await users.doc(uid).set({
             isTeacher: false,
             canRegister: true,
@@ -33,10 +33,10 @@ async function main() {
     }
     for (const teacher of teachers_json) {
         const { uid, username, password, classes } = teacher;
-        await auth.createUser({ uid, email: username + '@example.com', password, displayName: username }).catch((error) => {
+        /* await auth.createUser({ uid, email: username + '@example.com', password, displayName: username }).catch((error) => {
             console.error('Error creating new user: ', error);
             throw error;
-        });
+        }); */
         await users.doc(uid).set({
             isTeacher: true,
             canRegister: false,
@@ -62,9 +62,9 @@ async function main() {
 
     // setup classes
     const classes_json = require("./classes.json");
-    const classes_fall2022 = db.collection("classes/fall2022");
-    const classes_spring2023 = db.collection("classes/spring2023");
-    const classes_fall2023 = db.collection("classes/fall2023");
+    const classes_fall2022 = db.collection("fall2022");
+    const classes_spring2023 = db.collection("spring2023");
+    const classes_fall2023 = db.collection("fall2023");
     for (const {
         name,
         class_id,
