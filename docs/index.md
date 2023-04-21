@@ -10,7 +10,7 @@ There are a number of existing services that we will take positive and negative 
 
 <details>
 
-  <summary>Requirements</summary>
+  <summary># Requirements</summary>
 
 ### Original Client Requirements:
 A website that allows students to search and register for classes, administrators to add/delete classes, and students to view their current classes.
