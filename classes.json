@@ -1,0 +1,124 @@
+[
+  {
+    "name": "Low-Level Computing",
+    "class_id": "CSCI-1120",
+    "instructor": "users/11",
+    "enrolled": [
+      "users/1"
+    ],
+    "waitlisted": [
+      "users/4"
+    ],
+    "time": "9:00 AM",
+    "location": "Classroom A101",
+    "credits": 1
+  },
+  {
+    "name": "Essential Information Technology",
+    "class_id": "CSCI-1300",
+    "instructor": "users/12",
+    "enrolled": [],
+    "waitlisted": [
+      "users/1"
+    ],
+    "time": "10:30 AM",
+    "location": "Classroom B202",
+    "credits": 3
+  },
+  {
+    "name": "Computers and Society",
+    "class_id": "CSCI-1304",
+    "instructor": "users/13",
+    "enrolled": [
+      "users/2"
+    ],
+    "waitlisted": [],
+    "time": "8:15 AM",
+    "location": "Classroom C303",
+    "credits": 3
+  },
+  {
+    "name": "Introduction to Programming Logic",
+    "class_id": "CSCI-1311",
+    "instructor": "users/14",
+    "enrolled": [
+      "users/3"
+    ],
+    "waitlisted": [],
+    "time": "11:00 AM",
+    "location": "Classroom D104",
+    "credits": 3
+  },
+  {
+    "name": "Introduction to Programming for Engineering",
+    "class_id": "CSCI-1312",
+    "instructor": "users/15",
+    "enrolled": [
+      "users/4"
+    ],
+    "waitlisted": [],
+    "time": "9:45 AM",
+    "location": "Classroom E205",
+    "credits": 3
+  },
+  {
+    "name": "Principles of Computer Science I",
+    "class_id": "CSCI-1320",
+    "instructor": "users/16",
+    "enrolled": [
+      "users/5"
+    ],
+    "waitlisted": [],
+    "time": "10:15 AM",
+    "location": "Classroom F306",
+    "credits": 3
+  },
+  {
+    "name": "Principles of Computer Science II",
+    "class_id": "CSCI-1321",
+    "instructor": "users/17",
+    "enrolled": [
+      "users/6"
+    ],
+    "waitlisted": [],
+    "time": "8:30 AM",
+    "location": "Classroom G107",
+    "credits": 3
+  },
+  {
+    "name": "Discrete Structures",
+    "class_id": "CSCI-1323",
+    "instructor": "users/18",
+    "enrolled": [
+      "users/7"
+    ],
+    "waitlisted": [],
+    "time": "11:30 AM",
+    "location": "Classroom H208",
+    "credits": 3
+  },
+  {
+    "name": "Computer Science Colloquium",
+    "class_id": "CSCI-2094",
+    "instructor": "users/19",
+    "enrolled": [
+      "users/8"
+    ],
+    "waitlisted": [],
+    "time": "9:30 AM",
+    "location": "Classroom I309",
+    "credits": 0
+  },
+  {
+    "name": "Competitive Programming",
+    "class_id": "CSCI-2195",
+    "instructor": "users/20",
+    "enrolled": [
+      "users/9"
+    ],
+    "waitlisted": [],
+    "time": "8:45 AM",
+    "location": "Classroom J110",
+    "credits": 1
+  }
+]
