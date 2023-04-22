@@ -8,9 +8,8 @@ There are a number of existing services that we will take positive and negative 
 3. 
 
 
-<details>
 
-  <summary># Requirements</summary>
+# Requirements
 
 ### Original Client Requirements:
 A website that allows students to search and register for classes, administrators to add/delete classes, and students to view their current classes.
@@ -27,7 +26,7 @@ A website that allows students to search and register for classes, administrator
 4. Usability: The system should be easy to use and intuitive, with clear instructions and help resources available for users.
 5. Accessibility: The system should be accessible to users with disabilities.
 6. Scalability: The system should be scalable, able to handle a growing number of users and courses.
-</details>
+
   
 # Tech Stack
 
@@ -81,3 +80,7 @@ A student user will be brought to their landing page, where they will see the cl
 6. Do teachers have entirely separate accounts?
 7. Are teachers able to enroll students in their classes? Where would that happen?
 8. Are there any other requirements that will need to be edited?
+
+# Issues
+
+1. Cannot do drop downs for our documentation. It is some issue where either Github Pages or Cayman Jekyll theme doesn't translate the html formatting well.
