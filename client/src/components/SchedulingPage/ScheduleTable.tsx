@@ -23,21 +23,22 @@ const ScheduleTable = ({ classes }: ScheduleTableProps) => {
       </thead>
       <tbody>
         {
-          try {
-            classes.map((cls) => (
-              <>
-              <tr key={cls.class_id}>
-                <td>{cls.class_id}</td>
-                <td>{cls.name}</td>
-                <td>{cls.time}</td>
-                <td>{cls.location}</td>
-                <td>{cls.credits}</td>
-              </tr>
-              </>
-            ))
-          } catch (e) {
-            console.error(e);
-          }
+          classes.map((cls) => {
+            try {
+              return (
+                <tr key={cls.class_id}>
+                  <td>{cls.class_id}</td>
+                  <td>{cls.name}</td>
+                  <td>{cls.time}</td>
+                  <td>{cls.location}</td>
+                  <td>{cls.credits}</td>
+                </tr>
+              );
+            } catch (e) {
+              console.error(e);
+              return null;
+            }
+          })
         }
       </tbody>
     </table>
