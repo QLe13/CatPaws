@@ -17,21 +17,21 @@ const BasicRTable = ({ saved }) => {
         </tr>
       </thead>
       <tbody>
-        {saved.map(({ courseId, courseName, meetingTime, location, hours }, index) => (
+        {saved.map(({ class_id, name, time, location, credits }, index) => (
           <tr key={index}>
             <td>            
               <input
                     type="checkbox"
-                    id={courseId}
-                    name={courseName}
-                    value={courseId}
+                    id={class_id}
+                    name={name}
+                    value={class_id}
                     style={{display:'inline-block'}}
               /></td> 
-            <td>{courseId}</td>
-            <td>{courseName}</td>
-            <td>{meetingTime}</td>
+            <td>{class_id}</td>
+            <td>{name}</td>
+            <td>{time}</td>
             <td>{location}</td>
-            <td>{hours}</td>
+            <td>{credits}</td>
           </tr>
         ))}
       </tbody>
