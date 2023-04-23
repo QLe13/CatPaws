@@ -40,7 +40,9 @@ Upon opening the application, a user will see a login window. After submiting th
 
 ### Student User
 
-A student user will be brought to their landing page, where they will see the classes that they are currently taking. By clicking the buttons above the table, they will be able to switch between classes for the current semester and classes for the next semester.
+A student user will be brought to their landing page, where they will see the classes that they are currently taking. By clicking the buttons above the table, they will be able to switch between classes for the current semester and classes for the next semester. Students have two other pages to interact with: "FIND CLASSES" and "REGISTRATION." From the registration page, students are able to use the drop down and data entry fields to search for specific classes are groups of classes. When they find a class or classes that they want to register for, a student must check the "Register" field and hit "Add to Registration List" at the bottom of the page. This will add the classes to their registration page. Once a student adds all of their classes, they can navigate to the "REGISTRATION" page to register for them. To do this, check the "Register" field next to each class and hit "Register" at the bottom of the page.
+
+- For more information please see: [CSpace Navigation Guide and UI Testing](https://docs.google.com/document/d/112cDOXjSEEQH53L2FZ-bB3xaDKEE_CuiTwiG8daQkQ4/edit?usp=sharing)
 
 ### Teacher User
 
