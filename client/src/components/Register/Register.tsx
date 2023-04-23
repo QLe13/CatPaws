@@ -32,38 +32,37 @@ const Register = ({ user }: RegisterProps) => {
   const [savedClasses, setSavedClasses] = useState<Class[]>([]);
 
   useEffect(() => {
-    import { collection, doc, getDoc } from "firebase/firestore";
 
-// ...
-
-const fetchSavedClasses = async () => {
-  try {
-    const userDoc = await getDoc(doc(db, "users", user.uid));
-    if (!userDoc.exists()) {
-      console.error("User document not found");
-      return;
-    }
-    const userClasses = userDoc.data()?.saved;
-    if (!userClasses) {
-      console.error("No saved classes found for user");
-      return;
-    }
-    const classPromises = userClasses.map((classId) =>
-      getDoc(doc(collection(db, ...classId.split("/").slice(0, -1)), classId.split("/").pop() as string))
-    );
-    const classDocs = await Promise.all(classPromises);
-    const fetchedClasses = classDocs.map((docSnapshot) => {
-      if (!docSnapshot.exists()) {
-        console.error(`Class document not found: ${docSnapshot.id}`);
-        return null;
+    const fetchSavedClasses = async () => {
+      try {
+        const userDoc = await getDoc(doc(db, "users", user.uid));
+        if (!userDoc.exists()) {
+          console.error("User document not found");
+          return;
+        }
+        const userClasses = userDoc.data()?.saved;
+        if (!userClasses) {
+          console.error("No saved classes found for user");
+          return;
+        }
+        const classPromises = userClasses.map((classId) => {
+          const pathSegments = classId.split("/");
+          const classCollection = collection(db, pathSegments.slice(0, -1).join("/"));
+          return getDoc(doc(classCollection, pathSegments.pop() as string));
+        });
+        const classDocs = await Promise.all(classPromises);
+        const fetchedClasses = classDocs.map((docSnapshot) => {
+          if (!docSnapshot.exists()) {
+            console.error(`Class document not found: ${docSnapshot.id}`);
+            return null;
+          }
+          return docSnapshot.data();
+        });
+        setSavedClasses(fetchedClasses.filter((classData) => classData !== null));
+      } catch (error) {
+        console.error("Error fetching saved classes:", error);
       }
-      return docSnapshot.data();
-    });
-    setSavedClasses(fetchedClasses.filter((classData) => classData !== null));
-  } catch (error) {
-    console.error("Error fetching saved classes:", error);
-  }
-};
+    };
 
     
     
