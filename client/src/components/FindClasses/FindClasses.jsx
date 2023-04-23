@@ -5,27 +5,42 @@ import FindTable from './FindTable'
 import { collection, getDocs, query, where, getFirestore } from 'firebase/firestore';
 
 
-const form = { subject:'', level:'', time:[], pathway:''}
+const form = { subject:'', pathway:''}
 const FindClasses = (props) => {
   const curUser = props.user
   const handleSubmitForm = async (form) => {
-    console.log(form);
-    const db = getFirestore();
-    const q = query(
-      collection(db, 'classes'),
-      where('subject', '==', form.subject),
-      where('pathway', '==', form.pathway)
+    
+    const filteredForm = Object.fromEntries(
+      Object.entries(form).filter(
+        ([key, value]) => value !== null && !(Array.isArray(value) && value.length === 0)
+      )
     );
-  
-    const querySnapshot = await getDocs(q);
-    const classes = [];
-    querySnapshot.forEach((doc) => {
-      classes.push(doc.data());
+    console.log(filteredForm);
+    const db = getFirestore();
+    let classQuery = collection(db, 'classes');
+
+    // Add filters to the query based on the filteredForm
+    Object.entries(filteredForm).forEach(([key, value]) => {
+      if (Array.isArray(value)) {
+        value.forEach((item) => {
+          classQuery = query(classQuery, where(key, 'array-contains', item));
+        });
+      } else {
+        classQuery = query(classQuery, where(key, '==', value));
+      }
     });
-  
-    setAvailableClasses(classes);
+
+    const querySnapshot = await getDocs(classQuery);
+    const fetchedClassesData = [];
+
+    querySnapshot.forEach((doc) => {
+      fetchedClassesData.push(doc.data());
+    });
+
+    setFetchedClasses(fetchedClassesData);
   };
-  const [availableClasses, setAvailableClasses] = useState([]);  
+  const [availableClasses, setAvailableClasses] = useState([]); 
+  const [fetchedClasses, setFetchedClasses] = useState([]); 
   return (
     <div>
       <DropdownMenu form={form}/>
@@ -36,7 +51,7 @@ const FindClasses = (props) => {
         <h1>Available Classes</h1>
       </div>
       <div>
-      <FindTable classes={availableClasses} />
+      <FindTable fetchedClasses={fetchedClasses} />
       </div>
       <div className="fclass_container">
         <div className="fclass-container-button">

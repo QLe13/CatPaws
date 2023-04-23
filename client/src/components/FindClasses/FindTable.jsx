@@ -2,8 +2,8 @@ import React from "react";
 import { examplesaved } from "./classes";
 import './Findclasses.css'
 
-const BasicRTable = (props) => {
-  const { classes } = props;
+const BasicRTable = ({ fetchedClasses }) => {
+  //const { classes } = props;
   return (
     <div className="fclass__container">
     <table className="fclass__table">
@@ -18,7 +18,8 @@ const BasicRTable = (props) => {
         </tr>
       </thead>
       <tbody>
-      {classes.map(({ class_id, name, time, location, credits }, index) => (
+      {fetchedClasses && fetchedClasses.length > 0 ? (
+            fetchedClasses.map(({ class_id, name, time, location, credits }, index) => (
         <tr key={index}>
           <td>
             <input
@@ -35,7 +36,12 @@ const BasicRTable = (props) => {
           <td>{location}</td>
           <td>{credits}</td>
         </tr>
-      ))}
+        ))
+        ) : (
+          <tr>
+          <td colSpan="6">No classes found</td>
+        </tr>
+      )}
     </tbody>
     </table>
     </div>
