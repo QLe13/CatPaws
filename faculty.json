@@ -1,0 +1,92 @@
+[
+  {
+    "uid": "11",
+    "username": "teacher1",
+    "password": "tpassword1",
+    "classes": [
+      "spring2023/CSCI-3321",
+      "spring2023/CSCI-3322"
+    ]
+  },
+  {
+    "uid": "12",
+    "username": "teacher2",
+    "password": "tpassword2",
+    "classes": [
+      "spring2023/CSCI-3323"
+    ]
+  },
+  {
+    "uid": "13",
+    "username": "teacher3",
+    "password": "tpassword3",
+    "classes": [
+      "spring2023/CSCI-3334",
+      "spring2023/CSCI-3342",
+      "spring2023/CSCI-3343"
+    ]
+  },
+  {
+    "uid": "14",
+    "username": "teacher4",
+    "password": "tpassword4",
+    "classes": [
+      "spring2023/CSCI-3344",
+      "spring2023/CSCI-3345"
+    ]
+  },
+  {
+    "uid": "15",
+    "username": "teacher5",
+    "password": "tpassword5",
+    "classes": [
+      "spring2023/CSCI-3351"
+    ]
+  },
+  {
+    "uid": "16",
+    "username": "teacher6",
+    "password": "tpassword6",
+    "classes": [
+      "spring2023/CSCI-3353",
+      "spring2023/CSCI-3354",
+      "spring2023/CSCI-3361"
+    ]
+  },
+  {
+    "uid": "17",
+    "username": "teacher7",
+    "password": "tpassword7",
+    "classes": [
+      "spring2023/CSCI-3362",
+      "spring2023/CSCI-3366"
+    ]
+  },
+  {
+    "uid": "18",
+    "username": "teacher8",
+    "password": "tpassword8",
+    "classes": [
+      "spring2023/CSCI-3368"
+    ]
+  },
+  {
+    "uid": "19",
+    "username": "teacher9",
+    "password": "tpassword9",
+    "classes": [
+      "spring2023/CSCI-3390",
+      "spring2023/CSCI-3393",
+      "spring2023/CSCI-3394"
+    ]
+  },
+  {
+    "uid": "20",
+    "username": "teacher10",
+    "password": "tpassword10",
+    "classes": [
+      "spring2023/CSCI-3395",
+      "spring2023/CSCI-3396"
+    ]
+  }
+]
