@@ -28,13 +28,12 @@ A website that allows students to search and register for classes, administrator
 4. Usability: The system should be easy to use and intuitive, with clear instructions and help resources available for users.
 6. Scalability: The system should be scalable, able to handle a growing number of users and courses.
 
-  
 # Tech Stack
 
-- React - Frontend for dynamic pages
-- ExpressJS - Web application framework
+- React - Frontend for dynamic pages - [React Docs](https://react.dev/blog/2023/03/16/introducing-react-dev)
+- ExpressJS - Web application framework 
 - NodeJS - Server functionality
-- Firebase - Backend / database management
+- Firebase - Backend / database management - [Firebase Docs](https://firebase.google.com/docs)
 
 # Installation Guide
 
@@ -62,6 +61,40 @@ A student user will be brought to their landing page, where they will see the cl
 
 ### Teacher User
 
+Either Vaughan or Ty is supposed to be working on this.
+
+# Adding Users to the System
+
+At the moment, all users need to be manually added to the system. See guides below for adding student and teacher users.
+
+### Adding Student User
+
+To add a student user, navigate to the `users.json` file. Here you can manually create a new user by follow the below template:
+```
+{
+  "uid": "[the user's id]",
+  "username": "[the user's username]",
+  "password": "[the user's password]",
+  "classes": [ [this can be left empty. do not remove the brackets]
+  ],
+  "waitlisted": [
+  ],
+  "saved": [
+  ]
+},
+```
+
+# Issues We Encountered
+
+1. Firebase install sometimes returns authorization issues. This seems to be a MacOS issue. Running `sudo install` for the package helps.
+2. There seems to be conversion issues from typescript to React. This is either a Firebase or MacOS issue. Trevor Roddy knows the fix.
+3. Couldn't do drop downs to hide large text blocks in our documentation. Seems to be an issue where either Github Pages or Cayman Jekyll theme doesn't translate the html formatting well.
+
+# FAQ
+
+1. Do we actually have anything to put here? Are there frequent situations we ran into that we could help people with?
+
+
 # Modifications from the Client
 
 ### Client Meeting One
@@ -80,13 +113,3 @@ A student user will be brought to their landing page, where they will see the cl
 6. Do teachers have entirely separate accounts?
 7. Are teachers able to enroll students in their classes? Where would that happen?
 8. Are there any other requirements that will need to be edited?
-
-# Issues We Encountered
-
-1. Firebase install sometimes returns authorization issues. This seems to be a MacOS issue. Running `sudo install` for the package helps.
-2. There seems to be conversion issues from typescript to React. This is either a Firebase or MacOS issue. Trevor Roddy knows the fix.
-3. Couldn't do drop downs to hide large text blocks in our documentation. Seems to be an issue where either Github Pages or Cayman Jekyll theme doesn't translate the html formatting well.
-
-# FAQ
-
-1. Do we actually have anything to put here? Are there frequent situations we ran into that we could help people with?
