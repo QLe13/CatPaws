@@ -73,6 +73,31 @@ const Register = ({ user }: RegisterProps) => {
     }
 
   }
+
+  const handleRegisterClasses = async () => {
+    // create a new array of classes with the class_id not in the selectedClasses array
+    const reFormatSelectedClasses = selectedClasses.map((c) => `${nextSemester}/${JSON.stringify(c)
+    .slice(1, -1)}`);
+    try {
+      if (selectedClasses.length > 0) {
+        const curUser = user;
+        const userRef = doc(getFirestore(), 'users', curUser.uid);
+        await updateDoc(userRef, {
+          classes: [...curUser.classes,...reFormatSelectedClasses]
+        }).then(() => {
+          handleRemoveClasses().then(() => {
+            window.alert('Classes registered!');
+          } );
+        });
+      } else {
+        console.log('No classes selected');
+      }
+      window.location.reload();
+    } catch (error) {
+      console.log(error);
+    }
+
+  }
   
 
   // example data needs to be replaced with data from the database
@@ -94,7 +119,7 @@ const Register = ({ user }: RegisterProps) => {
       />
       <div className="register_container">
         <div className="register-container-button">
-          <button>Register</button>
+          <button onClick={handleRegisterClasses}>Register</button>
         </div>
         <div className="register-container-button">
           <button onClick={handleRemoveClasses}>Remove</button>
