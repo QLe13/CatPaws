@@ -1,6 +1,6 @@
 :root {
-    --primary-color: #9cb3db;
-    --primary-color-alpha: #005fff1a;
+    --primary-color: #db9c9c;
+    --primary-color-alpha: #ff00001a;
   }
   
   html,
@@ -61,7 +61,7 @@
   
   .auth__form-container_fields-content_input label {
     margin-bottom: 0.45rem;
-    color: rgb(61, 79, 88);
+    color: rgb(230, 40, 30);
     font-size: 12px;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 0.7px;
@@ -70,7 +70,7 @@
   
   .auth__form-container_fields-content_input input {
     padding: 0.55rem 0.4rem;
-    border: 1px solid rgb(184, 196, 194);
+    border: 1px solid var(--primary-color);
     border-radius: 4px;
     font-size: 14px;
     outline: none;
@@ -80,20 +80,19 @@
   }
   
   .auth__form-container_fields-content_input input::placeholder {
-    color: #b1b1b1;
+    color: var(--primary-color);
     width: 100%;
     font-weight: unset;
     font-family: Arial, Helvetica, sans-serif;
   }
   
   .auth__form-container_fields-content_input input:hover {
-    border-color: #dcdddd;
+    background-color: var(--primary-color-alpha);
   }
   
   .auth__form-container_fields-content_input input:focus,
   .auth__form-container_fields-content_input input:active {
-    box-shadow: 0px 0px 0px 1.5px #005fff;
-    border-color: #005fff;
+    box-shadow: 0px 0px 0px 1px var(--primary-color);
   }
   
   .auth__form-container_fields-content_input-password {
@@ -102,6 +101,9 @@
     top: 50%;
     cursor: pointer;
   }
+
+
+  
   
   .auth__form-container_fields-content_button {
     margin-top: 2rem;
