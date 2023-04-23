@@ -37,14 +37,19 @@ Firebase - Backend / database management
 
 # Installation Guide
 
-Clone the repository.
+### Client
 
-Navigate to the /client folder.
-Run npm install and npm start.
+- Install [node.js](https://nodejs.org/en/)
+- `cd client`
+- Run `npm install` to install dependencies.
+- Run `npm start` to start a local development server.
 
-Navigate to the /server folder.
-Run npm install express dotenv nodemon cors mongoose.
-Run npm run dev.
+### Firebase
+
+- Run `npm install` in the root directory of the project
+- Run `npm install -g firebase-tools` to install the firebase client.
+- Run `firebase login` to login to firebase.
+- Run `npm run deploy` to deploy firebase project.
 
 # User Guide
 
