@@ -5,9 +5,9 @@ The goal of this project is to create a lightweight and easy to use software for
 There are a number of existing services that we will take positive and negative inspiration from. Examples include Trinity University's TigerPaws and the Texas public-school service Skyward. However, these applications contain a number of issues that we will seek to avoid. These include:
 1. Unintuitive or unattractive user interfaces.
 2. Unnecessary features that either slow down the software or confuse users.
-3. 
+3. Other frustrating quirks like multiple navigation pages, frequently opening new tabs, and restrictive pre-requisite checking.
 
-
+We are aiming to create a simple software that supports student registration instead of adding stress to an already chaotic time.
 
 # Requirements
 
@@ -20,20 +20,19 @@ A website that allows students to search and register for classes, administrator
 3. Course Management: The system should allow faculty to add classes and manage course details such as course information, location, schedule.
 
 ### Non-functional Requirements:
-1. Security: The system should be secure, with strong authentication and authorization measures in place to prevent unauthorized access and protect sensitive data.
+1. Security: The system should be secure, with authentication and authorization measures in place to prevent unauthorized access and protect sensitive data.
 2. Performance: The system should be able to handle a large number of simultaneous users without performance degradation.
 3. Reliability: The system should be reliable and available 24/7, with a minimum of downtime for maintenance.
 4. Usability: The system should be easy to use and intuitive, with clear instructions and help resources available for users.
-5. Accessibility: The system should be accessible to users with disabilities.
 6. Scalability: The system should be scalable, able to handle a growing number of users and courses.
 
   
 # Tech Stack
 
-React - Frontend for dynamic pages
-ExpressJS - Web application framework
-NodeJS - Server functionality
-Firebase - Backend / database management
+- React - Frontend for dynamic pages
+- ExpressJS - Web application framework
+- NodeJS - Server functionality
+- Firebase - Backend / database management
 
 # Installation Guide
 
@@ -53,19 +52,13 @@ Firebase - Backend / database management
 
 # User Guide
 
-Upon opening the application, a user will see a login window. After submiting their username and password, the user will be brought to either the student interface or teacher interface. See guides of each below.
+Upon opening the application, a user will see a login window. After submiting their username and password, the user will be brought to either the student interface or teacher interface. See guides for each below.
 
 ### Student User
 
 A student user will be brought to their landing page, where they will see the classes that they are currently taking. By clicking the buttons above the table, they will be able to switch between classes for the current semester and classes for the next semester.
 
 ### Teacher User
-
-# Current Issues
-
-1. Firebase install sometimes provides access issues. This seems to be a MacOS issue.
-2. There seems to be conversion issues from typescript to React. This is either a Firebase or MacOS issue.
-
 
 # Modifications from the Client
 
@@ -86,6 +79,8 @@ A student user will be brought to their landing page, where they will see the cl
 7. Are teachers able to enroll students in their classes? Where would that happen?
 8. Are there any other requirements that will need to be edited?
 
-# Issues
+# Issues We Encountered
 
-1. Cannot do drop downs for our documentation. It is some issue where either Github Pages or Cayman Jekyll theme doesn't translate the html formatting well.
+1. Firebase install sometimes returns authorization issues. This seems to be a MacOS issue. Running `sudo install` for the package helps.
+2. There seems to be conversion issues from typescript to React. This is either a Firebase or MacOS issue. Trevor Roddy knows the fix.
+3. Couldn't do drop downs to hide large text blocks in our documentation. Seems to be an issue where either Github Pages or Cayman Jekyll theme doesn't translate the html formatting well.
