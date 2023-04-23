@@ -38,7 +38,7 @@
   .navbar__menu-item a {
     display: inline-block;
     padding: 0.5rem 1rem;
-    background-color: #ff0000;
+    background-color: #005fff;
     color: white;
     text-decoration: none;
     border: none;
@@ -48,7 +48,7 @@
   }
   
   .navbar__menu-item a:hover {
-    background-color: maroon;
+    background-color: blue;
   }
 
   .navbar__menu-item a.selected {

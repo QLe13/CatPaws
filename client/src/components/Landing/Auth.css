@@ -1,6 +1,6 @@
 :root {
-    --primary-color: #db9c9c;
-    --primary-color-alpha: #ff00001a;
+    --primary-color: #9cb3db;
+    --primary-color-alpha: #005fff1a;
   }
   
   html,
@@ -61,7 +61,7 @@
   
   .auth__form-container_fields-content_input label {
     margin-bottom: 0.45rem;
-    color: rgb(230, 40, 30);
+    color: rgb(184, 196, 194);
     font-size: 12px;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 0.7px;
