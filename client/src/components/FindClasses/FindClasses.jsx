@@ -3,7 +3,7 @@ import DropdownMenu from './DropdownMenu'
 import './DropdownMenu.css'
 import FindTable from './FindTable'
 import { collection, getDocs, query, where, getFirestore } from 'firebase/firestore';
-
+import { getCurSemester } from '../../utils';
 
 const form = { subject:'', pathway:''}
 const FindClasses = (props) => {
@@ -17,7 +17,8 @@ const FindClasses = (props) => {
     );
     console.log(filteredForm);
     const db = getFirestore();
-    let classQuery = collection(db, 'classes');
+    const curSemester = await getCurSemester();
+    let classQuery = collection(db, curSemester);
 
     // Add filters to the query based on the filteredForm
     Object.entries(filteredForm).forEach(([key, value]) => {
