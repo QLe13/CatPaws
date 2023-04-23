@@ -3,7 +3,9 @@ import DropdownMenu from './DropdownMenu'
 import './DropdownMenu.css'
 import FindTable from './FindTable'
 import { collection, getDocs, query, where, getFirestore, doc, updateDoc} from 'firebase/firestore';
-import { getCurSemester } from '../../utils';
+import { getCurSemester, getNextSemester } from '../../utils';
+
+const nextSemester = await getNextSemester();
 
 const form = { subject:'', pathway:''}
 const FindClasses = (props) => {
@@ -45,9 +47,13 @@ const FindClasses = (props) => {
   const handleAddToRegistrationList = async () => {
     if (selectedClasses.length > 0) {
       const userRef = doc(getFirestore(), 'users', curUser.uid);
-      await updateDoc(userRef, {
-        saved: [...curUser.saved, ...selectedClasses],
+      const reFormatedSelectedClasses = selectedClasses.map((classId) => {
+        return `${nextSemester}/${classId}`;
       });
+      await updateDoc(userRef, {
+        saved: [...curUser.saved, ...reFormatedSelectedClasses],
+      });
+      console.log(selectedClasses)
     } else {
       console.log('No classes selected');
     }
