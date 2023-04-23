@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import DropdownMenu from './DropdownMenu'
 import './DropdownMenu.css'
 import FindTable from './FindTable'
-import { collection, getDocs, query, where, getFirestore } from 'firebase/firestore';
+import { collection, getDocs, query, where, getFirestore, doc, updateDoc} from 'firebase/firestore';
 import { getCurSemester } from '../../utils';
 
 const form = { subject:'', pathway:''}
@@ -39,9 +39,20 @@ const FindClasses = (props) => {
     });
 
     setFetchedClasses(fetchedClassesData);
-  };
-  const [availableClasses, setAvailableClasses] = useState([]); 
+  }; 
   const [fetchedClasses, setFetchedClasses] = useState([]); 
+  const [selectedClasses, setSelectedClasses] = useState([]);
+  const handleAddToRegistrationList = async () => {
+    if (selectedClasses.length > 0) {
+      const userRef = doc(getFirestore(), 'users', curUser.uid);
+      await updateDoc(userRef, {
+        saved: [...curUser.saved, ...selectedClasses],
+      });
+    } else {
+      console.log('No classes selected');
+    }
+  };
+
   return (
     <div>
       <DropdownMenu form={form}/>
@@ -52,11 +63,20 @@ const FindClasses = (props) => {
         <h1>Available Classes</h1>
       </div>
       <div>
-      <FindTable fetchedClasses={fetchedClasses} />
+      <FindTable
+        fetchedClasses={fetchedClasses}
+        onSelectClass={(classId, isSelected) => {
+          if (isSelected) {
+            setSelectedClasses([...selectedClasses, classId]);
+          } else {
+            setSelectedClasses(selectedClasses.filter((id) => id !== classId));
+          }
+        }}
+      />
       </div>
       <div className="fclass_container">
         <div className="fclass-container-button">
-          <button>Add to Registration List</button>
+          <button onClick={handleAddToRegistrationList}>Add to Registration List</button>
         </div>
       </div>
 
