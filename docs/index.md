@@ -112,6 +112,10 @@ I CONFUSED BY HOW THE DATES WORK. WHAT IS SUPPOSED TO BE MANUALLY CHANGED IT KIN
 
 1. Do we actually have anything to put here? Are there frequent situations we ran into that we could help people with?
 
+# Testing
+
+[CSpace Navigation Guide and UI Testing](https://docs.google.com/document/d/112cDOXjSEEQH53L2FZ-bB3xaDKEE_CuiTwiG8daQkQ4/edit?usp=sharing)
+
 
 # Modifications from the Client
 
