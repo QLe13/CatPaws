@@ -5,6 +5,7 @@ import FindClasses from "./components/FindClasses/FindClasses";
 import NavBar from "./components/Navbar/NavBar";
 import Auth from "./components/Landing/Auth";
 import CreateClasses from "./components/CreateClasses/CreateClasses";
+import EditClasses from "./components/EditClasses/EditClasses";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { auth, db } from "./firebase";
 import { getDoc, doc, setDoc } from "firebase/firestore/lite";
@@ -74,8 +75,9 @@ const App = () => {
             <Route path="/" element={<Landing user={user} />} />
             <Route path="/schedule" element={<Landing user={user} />} />
             <Route path="/register" element={<Register user={user} />} />
-            <Route path="/createclasses" element={<CreateClasses />} />
+            <Route path="/createclasses" element={<CreateClasses user={user} />} />
             <Route path="/findclasses" element={<FindClasses user={user} />} />
+            <Route path="/editclasses" element={<EditClasses user={user}/>} />
           </Routes>
         </Router>
       </div>
