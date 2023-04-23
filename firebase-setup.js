@@ -73,7 +73,9 @@ async function main() {
         waitlisted,
         time,
         location,
-        credits
+        credits,
+        subject,
+        pathway
     } of classes_json) {
         for (const collection of [classes_fall2022, classes_spring2023, classes_fall2023]) {
             await collection.doc(class_id).set({
@@ -84,7 +86,9 @@ async function main() {
                 waitlisted,
                 time,
                 location,
-                credits
+                credits,
+                subject,
+                pathway
             }).catch((error) => {
                 console.error('Error creating new class: ', error);
                 throw error;
