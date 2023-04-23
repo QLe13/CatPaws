@@ -1,17 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
 import DropdownMenu from './DropdownMenu'
 import './DropdownMenu.css'
 import FindTable from './FindTable'
 import { collection, getDocs, query, where, getFirestore, doc, updateDoc} from 'firebase/firestore';
 import { getCurSemester, getNextSemester } from '../../utils';
 
-const nextSemester = await getNextSemester();
 
 const form = { subject:'', pathway:''}
 const FindClasses = (props) => {
   const curUser = props.user
   const [loading, setLoading] = useState(false);
   const [findingClasses, setFindingClasses] = useState(false);
+  const [nextSemester, setNextSemester] = useState(null); // add this line
+
+  useEffect(() => {
+    const getNextSemesterAsync = async () => {
+      const result = await getNextSemester();
+      setNextSemester(result);
+    };
+    getNextSemesterAsync();
+  }, []); // add this useEffect block
+
 
   const handleSubmitForm = async (form) => {
     setFindingClasses(true);
