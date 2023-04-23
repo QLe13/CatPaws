@@ -1,0 +1,39 @@
+[debug] [2023-04-23T03:57:49.498Z] ----------------------------------------------------------------------
+[debug] [2023-04-23T03:57:49.499Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy
+[debug] [2023-04-23T03:57:49.499Z] CLI Version:   11.28.0
+[debug] [2023-04-23T03:57:49.499Z] Platform:      darwin
+[debug] [2023-04-23T03:57:49.499Z] Node Version:  v18.16.0
+[debug] [2023-04-23T03:57:49.502Z] Time:          Sat Apr 22 2023 22:57:49 GMT-0500 (Central Daylight Time)
+[debug] [2023-04-23T03:57:49.502Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-04-23T03:57:49.534Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-04-23T03:57:49.534Z] > authorizing via signed-in user (leminhquang090@gmail.com)
+[debug] [2023-04-23T03:57:49.534Z] [iam] checking project cspace-51bd4 for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-04-23T03:57:49.535Z] > refreshing access token with scopes: []
+[debug] [2023-04-23T03:57:49.536Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-04-23T03:57:49.536Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-04-23T03:57:49.676Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-04-23T03:57:49.676Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-04-23T03:57:49.747Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/cspace-51bd4:testIamPermissions [none]
+[debug] [2023-04-23T03:57:49.748Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/cspace-51bd4:testIamPermissions x-goog-quota-user=projects/cspace-51bd4
+[debug] [2023-04-23T03:57:49.748Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cspace-51bd4:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-04-23T03:57:49.993Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/cspace-51bd4:testIamPermissions 200
+[debug] [2023-04-23T03:57:49.993Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/cspace-51bd4:testIamPermissions {}
+[debug] [2023-04-23T03:57:49.993Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project cspace-51bd4:
+
+  datastore.indexes.create
+  datastore.indexes.delete
+  datastore.indexes.list
+  datastore.indexes.update
+  firebase.projects.get
+  firebasehosting.sites.update
+[debug] [2023-04-23T03:57:49.994Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/cspace-51bd4 [none]
+[debug] [2023-04-23T03:57:50.187Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/cspace-51bd4 403
+[debug] [2023-04-23T03:57:50.188Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/cspace-51bd4 {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2023-04-23T03:57:50.188Z] HTTP Error: 403, The caller does not have permission
+[debug] [2023-04-23T03:57:50.257Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at responseToError (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:288:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project cspace-51bd4. Please make sure the project exists and your account has permission to access it.
