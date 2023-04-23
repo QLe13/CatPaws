@@ -1,7 +1,7 @@
 import React from 'react'
-import ClassesFound from './ClassesFound'
 import DropdownMenu from './DropdownMenu'
 import './DropdownMenu.css'
+import FindTable from './FindTable'
 
 const form = { subject:'', level:'', time:[], pathway:''}
 const FindClasses = (props) => {
@@ -17,12 +17,24 @@ const FindClasses = (props) => {
       <div className='dropdown-container'>
             <div className='dropdown-container-button' onClick={()=>handleSubmitForm(form)}><button>Search</button></div>
         </div>
-      <div className='result-header'>
+      <div className="fclass_container">
         <h1>Available Classes</h1>
       </div>
       <div>
-        <ClassesFound></ClassesFound>
+        <FindTable></FindTable>
       </div>
+      <div className="fclass_container">
+        <div className="fclass-container-button">
+          <button>Add to Registration List</button>
+        </div>
+      </div>
+
+
+
+
+
+
+
     </div>
   )
 }
