@@ -59,6 +59,9 @@
     cursor: pointer;
     transition: 0.3s ease;
   }
+  .fclass-container-button button:hover {
+    background: #9cb3db;
+  }
   .fclass_container {
     width: fit-content;
     margin: auto;
