@@ -2,7 +2,8 @@ import React from "react";
 import { examplesaved } from "./classes";
 import './Findclasses.css'
 
-const BasicRTable = ({ saved }) => {
+const BasicRTable = (props) => {
+  const { classes } = props;
   return (
     <div className="fclass__container">
     <table className="fclass__table">
@@ -17,24 +18,25 @@ const BasicRTable = ({ saved }) => {
         </tr>
       </thead>
       <tbody>
-        {examplesaved.map(({ courseId, courseName, meetingTime, location, hours }, index) => (
-          <tr key={index}>
-            <td>            
-              <input
-                    type="checkbox"
-                    id={courseId}
-                    name={courseName}
-                    value={courseId}
-                    style={{display:'inline-block'}}
-              /></td> 
-            <td>{courseId}</td>
-            <td>{courseName}</td>
-            <td>{meetingTime}</td>
-            <td>{location}</td>
-            <td>{hours}</td>
-          </tr>
-        ))}
-      </tbody>
+      {classes.map(({ class_id, name, time, location, credits }, index) => (
+        <tr key={index}>
+          <td>
+            <input
+              type="checkbox"
+              id={class_id}
+              name={name}
+              value={class_id}
+              style={{ display: "inline-block" }}
+            />
+          </td>
+          <td>{class_id}</td>
+          <td>{name}</td>
+          <td>{time}</td>
+          <td>{location}</td>
+          <td>{credits}</td>
+        </tr>
+      ))}
+    </tbody>
     </table>
     </div>
   );

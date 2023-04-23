@@ -1,16 +1,31 @@
-import React from 'react'
+import React, { useState } from 'react';
 import DropdownMenu from './DropdownMenu'
 import './DropdownMenu.css'
 import FindTable from './FindTable'
+import { collection, getDocs, query, where, getFirestore } from 'firebase/firestore';
+
 
 const form = { subject:'', level:'', time:[], pathway:''}
 const FindClasses = (props) => {
   const curUser = props.user
-  const handleSubmitForm = async (form) =>{
-    console.log(form)
-    //The form object will be sent to the backend, the backend should be able to handle the request and return a list of classes
-    //This function will be used to send the post request to the backend to receive a list of classess object that will be passed into the tabular object of classes
-  }
+  const handleSubmitForm = async (form) => {
+    console.log(form);
+    const db = getFirestore();
+    const q = query(
+      collection(db, 'classes'),
+      where('subject', '==', form.subject),
+      where('pathway', '==', form.pathway)
+    );
+  
+    const querySnapshot = await getDocs(q);
+    const classes = [];
+    querySnapshot.forEach((doc) => {
+      classes.push(doc.data());
+    });
+  
+    setAvailableClasses(classes);
+  };
+  const [availableClasses, setAvailableClasses] = useState([]);  
   return (
     <div>
       <DropdownMenu form={form}/>
@@ -21,7 +36,7 @@ const FindClasses = (props) => {
         <h1>Available Classes</h1>
       </div>
       <div>
-        <FindTable></FindTable>
+      <FindTable classes={availableClasses} />
       </div>
       <div className="fclass_container">
         <div className="fclass-container-button">
