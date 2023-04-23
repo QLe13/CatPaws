@@ -11,40 +11,6 @@ type LandingProps = {
 
 const Landing = ({user}: LandingProps) => {
 
-  const classesFall = [
-    {
-      courseId: "CSCI-2320",
-      courseName: "Principle of Data Abstraction",
-      meetingTime: "Mon/Wed/Fri 9:30AM-10:20AM",
-      location: "CSI 257",
-      hours: "3"
-    },
-    {
-      courseId: "CSCI-2322",
-      courseName: "Principle of Functional Languages",
-      meetingTime: "Mon/Wed/Fri 11:30AM-12:20AM",
-      location: "CSI 257",
-      hours: "3"
-    }
-  ];
-
-  const classesSpring = [
-    {
-      courseId: "CSCI-2321",
-      courseName: "Placeholder",
-      meetingTime: "Mon/Wed/Fri 9:30AM-10:20AM",
-      location: "CSI 257",
-      hours: "3"
-    },
-    {
-      courseId: "CSCI-2323",
-      courseName: "Placeholder",
-      meetingTime: "Mon/Wed/Fri 11:30AM-12:20AM",
-      location: "CSI 257",
-      hours: "3"
-    }
-  ];
-
   const [curSem, setSem] = useState('fall');
 
   useEffect(() => {
@@ -61,20 +27,33 @@ const Landing = ({user}: LandingProps) => {
     }
   }
 
-
   const [springclasses, setSpringClasses] = useState<Class[]>([]);
 
   useEffect(() => {
     const fetchSavedClasses = async () => {
       if (user) { // Check if 'user' is not 'null'
         const springClasses = (
-          await Promise.all(user.classes.map((s) => getDoc(doc(db, s))))
-        ).map((d) => d.data()) as Class[];
+          await Promise.all(user.classes.map(async (s) => {
+            const [col, docId] = s.split('/');
+            const docRef = doc(collection(db, col), docId);
+            const docSnap = await getDoc(docRef);
+  
+            if (docSnap.exists()) {
+              console.log("Document data:", docSnap.data());
+              return docSnap.data() as Class;
+            } else {
+              console.error(`Document ${s} not found.`);
+              return null;
+            }
+          }))
+        ).filter(c => c !== null) as Class[];
+        console.log("Spring Classes:", springClasses);
         setSpringClasses(springClasses);
       }
     };
     fetchSavedClasses();
   }, []);
+  
 
   const [fallclasses, setFallClasses] = useState<Class[]>([]);
 
@@ -82,8 +61,21 @@ const Landing = ({user}: LandingProps) => {
     const fetchSavedClasses = async () => {
       if (user) { // Check if 'user' is not 'null'
         const fallClasses = (
-          await Promise.all(user.classes.map((s) => getDoc(doc(db, s))))
-        ).map((d) => d.data()) as Class[];
+          await Promise.all(user.classes.map(async (s) => {
+            const [col, docId] = s.split('/');
+            const docRef = doc(collection(db, col), docId);
+            const docSnap = await getDoc(docRef);
+  
+            if (docSnap.exists()) {
+              console.log("Document data:", docSnap.data());
+              return docSnap.data() as Class;
+            } else {
+              console.error(`Document ${s} not found.`);
+              return null;
+            }
+          }))
+        ).filter(c => c !== null) as Class[];
+        console.log("Fall Classes:", fallClasses);
         setFallClasses(fallClasses);
       }
     };
