@@ -11,23 +11,6 @@ There are a number of existing services that we will take positive and negative 
 
 We are aiming to create a simple software that supports student registration instead of adding stress to an already chaotic time.
 
-# Requirements
-
-### Original Client Requirements:
-A website that allows students to search and register for classes, administrators to add/delete classes, and students to view their current classes.
-
-### Functional Requirements:
-1. Student Registration: The system should allow students to register for classes, view their class schedules, and drop or add courses.
-2. Faculty Registration: The system should allow faculty members to view their schedules, access/add/delete course information.
-3. Course Management: The system should allow faculty to add classes and manage course details such as course information, location, schedule.
-
-### Non-functional Requirements:
-1. Security: The system should be secure, with authentication and authorization measures in place to prevent unauthorized access and protect sensitive data.
-2. Performance: The system should be able to handle a large number of simultaneous users without performance degradation.
-3. Reliability: The system should be reliable and available 24/7, with a minimum of downtime for maintenance.
-4. Usability: The system should be easy to use and intuitive, with clear instructions and help resources available for users.
-6. Scalability: The system should be scalable, able to handle a growing number of users and courses.
-
 # Tech Stack
 
 - React - Frontend for dynamic pages - [React Docs](https://react.dev/blog/2023/03/16/introducing-react-dev)
@@ -102,6 +85,10 @@ To add a teacher user, navigate to the `faculty.json` file. Here you can manuall
 At the moment, the registration semesters must be changed manually. First, navigate to the `seasons.json` file. Now you must ...
 I CONFUSED BY HOW THE DATES WORK. WHAT IS SUPPOSED TO BE MANUALLY CHANGED IT KINDA ALL SEEMS RIGHT. DO WE NEED TO CHANGE THE ORDER OF THEM SO THAT THE UI PRESENTS THEM DIFFERENTLY?
 
+# Testing
+
+[CSpace Navigation Guide and UI Testing](https://docs.google.com/document/d/112cDOXjSEEQH53L2FZ-bB3xaDKEE_CuiTwiG8daQkQ4/edit?usp=sharing)
+
 # Issues We Encountered
 
 1. Firebase install sometimes returns authorization issues. This seems to be a MacOS issue. Running `sudo install` for the package helps.
@@ -112,10 +99,22 @@ I CONFUSED BY HOW THE DATES WORK. WHAT IS SUPPOSED TO BE MANUALLY CHANGED IT KIN
 
 1. Do we actually have anything to put here? Are there frequent situations we ran into that we could help people with?
 
-# Testing
+# Requirements
 
-[CSpace Navigation Guide and UI Testing](https://docs.google.com/document/d/112cDOXjSEEQH53L2FZ-bB3xaDKEE_CuiTwiG8daQkQ4/edit?usp=sharing)
+### Original Client Requirements:
+A website that allows students to search and register for classes, administrators to add/delete classes, and students to view their current classes.
 
+### Functional Requirements:
+1. Student Registration: The system should allow students to register for classes, view their class schedules, and drop or add courses.
+2. Faculty Registration: The system should allow faculty members to view their schedules, access/add/delete course information.
+3. Course Management: The system should allow faculty to add classes and manage course details such as course information, location, schedule.
+
+### Non-functional Requirements:
+1. Security: The system should be secure, with authentication and authorization measures in place to prevent unauthorized access and protect sensitive data.
+2. Performance: The system should be able to handle a large number of simultaneous users without performance degradation.
+3. Reliability: The system should be reliable and available 24/7, with a minimum of downtime for maintenance.
+4. Usability: The system should be easy to use and intuitive, with clear instructions and help resources available for users.
+6. Scalability: The system should be scalable, able to handle a growing number of users and courses.
 
 # Modifications from the Client
 
