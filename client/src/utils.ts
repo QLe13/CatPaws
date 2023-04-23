@@ -17,6 +17,14 @@ export const getCurSemester = async () => {
     }
     return 'fall' + curDate.getUTCFullYear()
 }
+
+export const getNextSemester = async () => {
+    const seasons = (await getDocs(query(collection(db, 'seasons'), orderBy('end')))).docs.map((doc) => ({ name: doc.id, end: doc.get('end') }))
+    for (const { name, end } of seasons) {
+        if (end > curDateYearly) return name + curDate.getUTCFullYear()
+    }
+    return 'spring' + curDate.getUTCFullYear()
+}
 /** Get the current firebase auth user even after a redirect, see https://firebase.google.com/docs/reference/js/firebase.User */
 export const getAuthUser = () => getRedirectResult(auth).then((result) => {
     if (result) {
