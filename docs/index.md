@@ -84,6 +84,24 @@ To add a student user, navigate to the `users.json` file. Here you can manually 
 },
 ```
 
+### Adding Teacher User
+
+To add a teacher user, navigate to the `faculty.json` file. Here you can manually create a new user by follow the below template:
+```
+{
+  "uid": "[the user's id]",
+  "username": "[the user's username]",
+  "password": "[the user's password]",
+  "classes": [ [this can be left empty. do not remove the brackets]
+  ]
+},
+```
+
+# Changing Semesters
+
+At the moment, the registration semesters must be changed manually. First, navigate to the `seasons.json` file. Now you must ...
+I CONFUSED BY HOW THE DATES WORK. WHAT IS SUPPOSED TO BE MANUALLY CHANGED IT KINDA ALL SEEMS RIGHT. DO WE NEED TO CHANGE THE ORDER OF THEM SO THAT THE UI PRESENTS THEM DIFFERENTLY?
+
 # Issues We Encountered
 
 1. Firebase install sometimes returns authorization issues. This seems to be a MacOS issue. Running `sudo install` for the package helps.
