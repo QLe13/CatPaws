@@ -34,15 +34,20 @@ const Landing = ({user}: LandingProps) => {
       if (user) { // Check if 'user' is not 'null'
         const springClasses = (
           await Promise.all(user.classes.map(async (s) => {
-            const [col, docId] = s.split('/');
-            const docRef = doc(collection(db, col), docId);
-            const docSnap = await getDoc(docRef);
+            const [semester, docId] = s.split('/');
+            if (semester === 'spring2023') {
+              const col = semester;
+              const docRef = doc(collection(db, col), docId);
+              const docSnap = await getDoc(docRef);
   
-            if (docSnap.exists()) {
-              console.log("Document data:", docSnap.data());
-              return docSnap.data() as Class;
+              if (docSnap.exists()) {
+                console.log("Document data:", docSnap.data());
+                return docSnap.data() as Class;
+              } else {
+                console.error(`Document ${s} not found.`);
+                return null;
+              }
             } else {
-              console.error(`Document ${s} not found.`);
               return null;
             }
           }))
@@ -54,6 +59,9 @@ const Landing = ({user}: LandingProps) => {
     fetchSavedClasses();
   }, []);
   
+  
+  
+  
 
   const [fallclasses, setFallClasses] = useState<Class[]>([]);
 
@@ -62,15 +70,20 @@ const Landing = ({user}: LandingProps) => {
       if (user) { // Check if 'user' is not 'null'
         const fallClasses = (
           await Promise.all(user.classes.map(async (s) => {
-            const [col, docId] = s.split('/');
-            const docRef = doc(collection(db, col), docId);
-            const docSnap = await getDoc(docRef);
+            const [semester, docId] = s.split('/');
+            if (semester === 'fall2022') {
+              const col = semester;
+              const docRef = doc(collection(db, col), docId);
+              const docSnap = await getDoc(docRef);
   
-            if (docSnap.exists()) {
-              console.log("Document data:", docSnap.data());
-              return docSnap.data() as Class;
+              if (docSnap.exists()) {
+                console.log("Document data:", docSnap.data());
+                return docSnap.data() as Class;
+              } else {
+                console.error(`Document ${s} not found.`);
+                return null;
+              }
             } else {
-              console.error(`Document ${s} not found.`);
               return null;
             }
           }))
@@ -81,6 +94,9 @@ const Landing = ({user}: LandingProps) => {
     };
     fetchSavedClasses();
   }, []);
+  
+  
+  
 
   return (
     <div className="landing">
