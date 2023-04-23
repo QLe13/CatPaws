@@ -75,7 +75,7 @@ To add a student user, navigate to the `users.json` file. Here you can manually 
   "uid": "[the user's id]",
   "username": "[the user's username]",
   "password": "[the user's password]",
-  "classes": [ [this can be left empty. do not remove the brackets]
+  "classes": [
   ],
   "waitlisted": [
   ],
@@ -92,7 +92,7 @@ To add a teacher user, navigate to the `faculty.json` file. Here you can manuall
   "uid": "[the user's id]",
   "username": "[the user's username]",
   "password": "[the user's password]",
-  "classes": [ [this can be left empty. do not remove the brackets]
+  "classes": [
   ]
 },
 ```
