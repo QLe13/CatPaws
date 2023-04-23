@@ -46,7 +46,7 @@ A student user will be brought to their landing page, where they will see the cl
 
 ### Teacher User
 
-Either Vaughan or Ty is supposed to be working on this.
+Either Vaughan or Ty is supposed to be working on this. (nvm I'm just gonna do it)
 
 # Adding Users to the System
 
