@@ -1,11 +1,11 @@
 import React from "react";
 import { examplesaved } from "./classes";
-import './Register.css'
+import './Findclasses.css'
 
 const BasicRTable = ({ saved }) => {
   return (
-    <div className="register__container">
-    <table className="register__table">
+    <div className="fclass__container">
+    <table className="fclass__table">
       <thead>
         <tr>
           <th>Register</th>
