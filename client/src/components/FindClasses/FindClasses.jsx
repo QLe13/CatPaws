@@ -56,8 +56,11 @@ const FindClasses = (props) => {
     try {
       if (selectedClasses.length > 0) {
         const userRef = doc(getFirestore(), 'users', curUser.uid);
+        const reFormatedSelectedClasses = selectedClasses.map((classId) => {
+          return `${nextSemester}/${classId}`;
+        });
         await updateDoc(userRef, {
-          saved: [...curUser.saved, ...selectedClasses],
+          saved: [...curUser.saved, ...reFormatedSelectedClasses],
         }).then(() => {
           window.alert('Classes added to pre-registration list!');
         });
