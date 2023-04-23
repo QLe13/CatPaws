@@ -1,8 +1,7 @@
 import React from "react";
 import { examplesaved } from "./classes";
 import './Findclasses.css'
-import { getNextSemester } from '../../utils';
-//const curSemester = await getNextSemester();
+
 const BasicRTable = ({ fetchedClasses, onSelectClass }) => {
   //const { classes } = props;
   return (
@@ -30,7 +29,6 @@ const BasicRTable = ({ fetchedClasses, onSelectClass }) => {
                     value={class_id}
                     style={{ display: "inline-block" }}
                     onChange={(e) => {
-                      //const classId = curSemester + "/" + e.target.value;
                       const classId = e.target.value;
                       if (e.target.checked) {
                         onSelectClass(classId, true);
