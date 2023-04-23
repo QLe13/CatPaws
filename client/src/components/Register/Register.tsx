@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import BasicRTable from "./BasicRTable";
 import { Component } from "react";
-import RegisterDropdown from "./RegisterDropdown";
-import CheckForm from "./CheckForm";
 import { db, auth } from "../../firebase";
 import { collection, doc, getDoc, getDocs, query, where } from "firebase/firestore/lite";
 //<Row Selection />

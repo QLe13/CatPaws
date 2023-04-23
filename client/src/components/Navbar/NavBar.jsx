@@ -14,10 +14,10 @@ const NavBar = ({ isTeacher }) => {
           <a href="/schedule">Schedule</a>
         </li>
         <li className="navbar__menu-item">
-          <a href={!isTeacher ? "/findclasses" : "createclasses"}>{!isTeacher ? "Find Classes" : "Create Classes"}</a>
+          <a href={!isTeacher ? "/findclasses" : "/createclasses"}>{!isTeacher ? "Find Classes" : "Create Classes"}</a>
         </li>
         <li className="navbar__menu-item">
-          <a href="/register">Registration</a>
+          <a href={!isTeacher ? "/register": "/editclasses"}>{!isTeacher?"Registration":"Edit Classes"}</a>
         </li>
         <li className="navbar__menu-item">
           <a href="/" onClick={() => {
