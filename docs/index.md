@@ -1,16 +1,107 @@
-# CSpace - Project Description
+# CSpace
+
+# Project Description
 
 The goal of this project is to create a lightweight and easy to use software for class registration in a higher education setting. By restricting the scope to our client's requirements, we can create a reliable service that avoids unnecessary feature bloating. 
 
 There are a number of existing services that we will take positive and negative inspiration from. Examples include Trinity University's TigerPaws and the Texas public-school service Skyward. However, these applications contain a number of issues that we will seek to avoid. These include:
 1. Unintuitive or unattractive user interfaces.
 2. Unnecessary features that either slow down the software or confuse users.
-3. 
+3. Other frustrating quirks like multiple navigation pages, frequently opening new tabs, and restrictive pre-requisite checking.
 
+We are aiming to create a simple software that supports student registration instead of adding stress to an already chaotic time.
 
-<details>
+# Tech Stack
 
-  <summary># Requirements</summary>
+- React - Frontend for dynamic pages - [React Docs](https://react.dev/blog/2023/03/16/introducing-react-dev)
+- ExpressJS - Web application framework 
+- NodeJS - Server functionality
+- Firebase - Backend / database management - [Firebase Docs](https://firebase.google.com/docs)
+
+# Installation Guide
+
+### Client
+
+- Install [node.js](https://nodejs.org/en/)
+- `cd client`
+- Run `npm install` to install dependencies.
+- Run `npm start` to start a local development server.
+
+### Firebase
+
+- Run `npm install` in the root directory of the project
+- Run `npm install -g firebase-tools` to install the firebase client.
+- Run `firebase login` to login to firebase.
+- Run `npm run deploy` to deploy firebase project.
+
+# User Guide
+
+Upon opening the application, a user will see a login window. After submiting their username and password, the user will be brought to either the student interface or teacher interface. See guides for each below.
+
+### Student User
+
+A student user will be brought to their landing page, where they will see the classes that they are currently taking. By clicking the buttons above the table, they will be able to switch between classes for the current semester and classes for the next semester. Students have two other pages to interact with: "FIND CLASSES" and "REGISTRATION." From the registration page, students are able to use the drop down and data entry fields to search for specific classes are groups of classes. When they find a class or classes that they want to register for, a student must check the "Register" field and hit "Add to Registration List" at the bottom of the page. This will add the classes to their registration page. Once a student adds all of their classes, they can navigate to the "REGISTRATION" page to register for them. To do this, check the "Register" field next to each class and hit "Register" at the bottom of the page.
+
+- For more information please see: [CSpace Navigation Guide and UI Testing](https://docs.google.com/document/d/112cDOXjSEEQH53L2FZ-bB3xaDKEE_CuiTwiG8daQkQ4/edit?usp=sharing)
+
+### Teacher User
+
+Either Vaughan or Ty is supposed to be working on this. (nvm I'm just gonna do it)
+
+# Adding Users to the System
+
+At the moment, all users need to be manually added to the system. See guides below for adding student and teacher users.
+
+### Adding Student User
+
+To add a student user, navigate to the `users.json` file. Here you can manually create a new user by follow the below template:
+```
+{
+  "uid": "[the user's id]",
+  "username": "[the user's username]",
+  "password": "[the user's password]",
+  "classes": [
+  ],
+  "waitlisted": [
+  ],
+  "saved": [
+  ]
+},
+```
+
+### Adding Teacher User
+
+To add a teacher user, navigate to the `faculty.json` file. Here you can manually create a new user by follow the below template:
+```
+{
+  "uid": "[the user's id]",
+  "username": "[the user's username]",
+  "password": "[the user's password]",
+  "classes": [
+  ]
+},
+```
+
+# Changing Semesters
+
+At the moment, the registration semesters must be changed manually. First, navigate to the `seasons.json` file. Now you must ...
+I CONFUSED BY HOW THE DATES WORK. WHAT IS SUPPOSED TO BE MANUALLY CHANGED IT KINDA ALL SEEMS RIGHT. DO WE NEED TO CHANGE THE ORDER OF THEM SO THAT THE UI PRESENTS THEM DIFFERENTLY?
+
+# Testing
+
+[CSpace Navigation Guide and UI Testing](https://docs.google.com/document/d/112cDOXjSEEQH53L2FZ-bB3xaDKEE_CuiTwiG8daQkQ4/edit?usp=sharing)
+
+# Issues We Encountered
+
+1. Firebase install sometimes returns authorization issues. This seems to be a MacOS issue. Running `sudo install` for the package helps.
+2. There seems to be conversion issues from typescript to React. This is either a Firebase or MacOS issue. Trevor Roddy knows the fix.
+3. Couldn't do drop downs to hide large text blocks in our documentation. Seems to be an issue where either Github Pages or Cayman Jekyll theme doesn't translate the html formatting well.
+
+# FAQ
+
+1. Do we actually have anything to put here? Are there frequent situations we ran into that we could help people with?
+
+# Requirements
 
 ### Original Client Requirements:
 A website that allows students to search and register for classes, administrators to add/delete classes, and students to view their current classes.
@@ -21,47 +112,11 @@ A website that allows students to search and register for classes, administrator
 3. Course Management: The system should allow faculty to add classes and manage course details such as course information, location, schedule.
 
 ### Non-functional Requirements:
-1. Security: The system should be secure, with strong authentication and authorization measures in place to prevent unauthorized access and protect sensitive data.
+1. Security: The system should be secure, with authentication and authorization measures in place to prevent unauthorized access and protect sensitive data.
 2. Performance: The system should be able to handle a large number of simultaneous users without performance degradation.
 3. Reliability: The system should be reliable and available 24/7, with a minimum of downtime for maintenance.
 4. Usability: The system should be easy to use and intuitive, with clear instructions and help resources available for users.
-5. Accessibility: The system should be accessible to users with disabilities.
 6. Scalability: The system should be scalable, able to handle a growing number of users and courses.
-</details>
-  
-# Tech Stack
-
-React - Frontend for dynamic pages
-ExpressJS - Web application framework
-NodeJS - Server functionality
-Firebase - Backend / database management
-
-# Installation Guide
-
-Clone the repository.
-
-Navigate to the /client folder.
-Run npm install and npm start.
-
-Navigate to the /server folder.
-Run npm install express dotenv nodemon cors mongoose.
-Run npm run dev.
-
-# User Guide
-
-Upon opening the application, a user will see a login window. After submiting their username and password, the user will be brought to either the student interface or teacher interface. See guides of each below.
-
-### Student User
-
-A student user will be brought to their landing page, where they will see the classes that they are currently taking. By clicking the buttons above the table, they will be able to switch between classes for the current semester and classes for the next semester.
-
-### Teacher User
-
-# Current Issues
-
-1. Firebase install sometimes provides access issues. This seems to be a MacOS issue.
-2. There seems to be conversion issues from typescript to React. This is either a Firebase or MacOS issue.
-
 
 # Modifications from the Client
 
