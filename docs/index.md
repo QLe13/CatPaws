@@ -1,4 +1,6 @@
-# CSpace - Project Description
+# CSpace
+
+# Project Description
 
 The goal of this project is to create a lightweight and easy to use software for class registration in a higher education setting. By restricting the scope to our client's requirements, we can create a reliable service that avoids unnecessary feature bloating. 
 
@@ -84,3 +86,7 @@ A student user will be brought to their landing page, where they will see the cl
 1. Firebase install sometimes returns authorization issues. This seems to be a MacOS issue. Running `sudo install` for the package helps.
 2. There seems to be conversion issues from typescript to React. This is either a Firebase or MacOS issue. Trevor Roddy knows the fix.
 3. Couldn't do drop downs to hide large text blocks in our documentation. Seems to be an issue where either Github Pages or Cayman Jekyll theme doesn't translate the html formatting well.
+
+# FAQ
+
+1. Do we actually have anything to put here? Are there frequent situations we ran into that we could help people with?
