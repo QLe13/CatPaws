@@ -33,7 +33,7 @@ Our main goal is to create a straightforward software that simplifies the regist
 
 # User Guide
 
-Upon opening the application, a user will see a login window. After submiting their username and password, the user will be brought to either the student interface or teacher interface. See guides for each below.
+Upon opening the application, a user will see a login window. After submiting their username and password, or signing in via a google account, the user will be brought to either the student interface or teacher interface. See guides for each below.
 
 ### Student User
 
