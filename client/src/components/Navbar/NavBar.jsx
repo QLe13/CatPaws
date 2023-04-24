@@ -1,9 +1,14 @@
 import React from 'react';
-import './nav.css';
 import { signOut } from 'firebase/auth';
 import { auth } from '../../firebase';
 
 const NavBar = ({ isTeacher }) => {
+
+  if (isTeacher)
+    require('./teacher-nav.css');
+  else
+    require('./nav.css');
+
   return (
     <nav className="navbar">
       <ul className="navbar__menu">
