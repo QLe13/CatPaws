@@ -2,14 +2,11 @@
 
 # Project Description
 
-The goal of this project is to create a lightweight and easy to use software for class registration in a higher education setting. By restricting the scope to our client's requirements, we can create a reliable service that avoids unnecessary feature bloating. 
+The objective of this project is to develop a user-friendly and efficient software solution for class registration in a higher education environment. Our focus is to deliver a lightweight and reliable service that fulfills our client's specific requirements without adding unnecessary features that can complicate the user experience.
 
-There are a number of existing services that we will take positive and negative inspiration from. Examples include Trinity University's TigerPaws and the Texas public-school service Skyward. However, these applications contain a number of issues that we will seek to avoid. These include:
-1. Unintuitive or unattractive user interfaces.
-2. Unnecessary features that either slow down the software or confuse users.
-3. Other frustrating quirks like multiple navigation pages, frequently opening new tabs, and restrictive pre-requisite checking.
+We will draw inspiration from existing registration services such as TigerPaws from Trinity University and Skyward from Texas public schools. However, we will avoid common issues identified in these applications, such as unintuitive interfaces, feature bloat, and frustrating quirks that slow down or confuse users.
 
-We are aiming to create a simple software that supports student registration instead of adding stress to an already chaotic time.
+Our main goal is to create a straightforward software that simplifies the registration process and helps students navigate through their course selection with ease. We aim to reduce stress and frustration during the hectic time of class registration by providing a seamless and intuitive user experience.
 
 # Tech Stack
 
@@ -40,13 +37,23 @@ Upon opening the application, a user will see a login window. After submiting th
 
 ### Student User
 
-A student user will be brought to their landing page, where they will see the classes that they are currently taking. By clicking the buttons above the table, they will be able to switch between classes for the current semester and classes for the next semester. Students have two other pages to interact with: "FIND CLASSES" and "REGISTRATION." From the registration page, students are able to use the drop down and data entry fields to search for specific classes are groups of classes. When they find a class or classes that they want to register for, a student must check the "Register" field and hit "Add to Registration List" at the bottom of the page. This will add the classes to their registration page. Once a student adds all of their classes, they can navigate to the "REGISTRATION" page to register for them. To do this, check the "Register" field next to each class and hit "Register" at the bottom of the page.
+Upon logging in, students will be directed to their landing page, which displays the classes they are currently enrolled in. They can navigate between classes for the current semester and classes for the next semester by clicking on the buttons located above the table.
+
+There are two additional pages available for student use: "FIND CLASSES" and "REGISTRATION." From the "REGISTRATION" page, students can search for specific classes or groups of classes by using the drop-down and data entry fields. Once they have found a class or classes they want to register for, they must check the "Register" field and hit "Add to Registration List" located at the bottom of the page. This will add the selected classes to their registration list.
+
+Once all desired classes have been added to the registration list, students can navigate to the "REGISTRATION" page to complete the registration process. To register for the classes on the list, they must check the "Register" field next to each class and hit the "Register" button at the bottom of the page.
+
+**It's important to note that students should review their registration list carefully to ensure that the classes they have selected do not conflict with each other. Additionally, students must meet any prerequisites or eligibility requirements for the classes they wish to register for. CSpace does not have active checking for conflicts.
 
 - For more information please see: [CSpace Navigation Guide and UI Testing](https://docs.google.com/document/d/112cDOXjSEEQH53L2FZ-bB3xaDKEE_CuiTwiG8daQkQ4/edit?usp=sharing)
 
 ### Teacher User
 
-A Teacher user will be brought to a similar landing page to students, but with several different options. The Teacher will have a schedule displaying what classes they will teach this semester and next semester. This can be reached at any time through the "USER INFO" or schedule tabs located on the navbar located at the top of the screen. Teachers have three other buttons on the navbar "CREATE CLASSES", "EDIT CLASSES", and "LOGOUT". "LOGOUT" will return the user to the log in screen, where they can log back in if needed.  The "CREATE CLASSES" button allows a teacher user to create a class they will teach. Various textboxes displays the various details of a new class, including number, name, description, meeting times, and various other pertinent information. A Teacher user must merely click on one of these boxes and type in the info. After filling all relevant fields for the class, they should select the "Create" button at the bottom of the page. To edit or delete a class, one must go to the "EDIT CLASSES" page. A table of all the teacher's classes will appear. To delete a class, simply check one of the classes and hit the delete class field. To edit a class, delete it and re-create it with the same course ID, which will preserve the currently attached student and teacher users. 
+Upon logging in, teachers will be directed to their landing page, which displays the classes they are currently teaching and the classes they will teach next semester. To add or edit classes, teachers can navigate to the "CREATE CLASSES" and "EDIT CLASSES" pages.
+
+On the "CREATE CLASSES" page, teachers can create a new class by interacting with the drop-down and data entry fields. They can provide all the relevant information, such as course name, course code, class schedule, and any other required details. Similarly, on the "EDIT CLASSES" page, teachers can make changes to an existing class by selecting the class they want to edit.
+
+**Please note that teachers should double-check all the information entered before submitting it. Currently, CSpace does not offer data validation or checking, so it's crucial to ensure that all the information provided is accurate and complete.
 
 # Adding Users to the System
 
@@ -82,24 +89,23 @@ To add a teacher user, navigate to the `faculty.json` file. Here you can manuall
 },
 ```
 
-# Changing Semesters
+# Editing Semesters
 
-At the moment, the registration semesters must be changed manually. First, navigate to the `seasons.json` file. Now you must ...
-I CONFUSED BY HOW THE DATES WORK. WHAT IS SUPPOSED TO BE MANUALLY CHANGED IT KINDA ALL SEEMS RIGHT. DO WE NEED TO CHANGE THE ORDER OF THEM SO THAT THE UI PRESENTS THEM DIFFERENTLY?
+If you would like to adjust the start and end times of your semesters, you will have to manually do so in `seasons.json` file. The current semester that is displayed in the web app is determined by the `~/client/utils.ts` function `getCurSemester` uses the `end` data in the `seasons.json` file. 
 
 # Testing
 
 [CSpace Navigation Guide and UI Testing](https://docs.google.com/document/d/112cDOXjSEEQH53L2FZ-bB3xaDKEE_CuiTwiG8daQkQ4/edit?usp=sharing)
 
-# Issues We Encountered
+# Frequently Encountered Issues
 
 1. Firebase install sometimes returns authorization issues. This seems to be a MacOS issue. Running `sudo install` for the package helps.
-2. There seems to be conversion issues from typescript to React. This is either a Firebase or MacOS issue. Trevor Roddy knows the fix.
-3. Couldn't do drop downs to hide large text blocks in our documentation. Seems to be an issue where either Github Pages or Cayman Jekyll theme doesn't translate the html formatting well.
-
-# FAQ
-
-1. Do we actually have anything to put here? Are there frequent situations we ran into that we could help people with?
+2. There seems to be conversion issues from typescript to React. This is a typescript version issue (usually affecting MacOS). It can be fixed by ensuring the correct typescript version is added to the `package.json` files in both the root and client directories. See below:
+```
+"devDependencies": {
+  "typescript": "^4.0.0"
+}
+```
 
 # Requirements
 
@@ -122,10 +128,14 @@ A website that allows students to search and register for classes, administrator
 
 ### Client Meeting One
 1. Could we change the color of the buttons? The greyed out buttons make them look unclickable.
-2. There were others. I have them written down somewhere.
+2. How do you define and achieve efficiency?
+3. Will you do a search bar? If so, how?
+4. How will students "favorite" classes before registering?
 
 ### Client Meeting Two
-1. Was not present. Will have to ask Derian if he knows what questions we were asked (or feedback we received).
+1. UI looks good. Still concerned about the clarity of the buttons.
+2. Why did you decide to remove waitlisting?
+3. Are you still on schedule? What have you fallen behind on?
 
 ### Client Meeting Three
 1. Will you be implementing a search bar when searching for classes?
@@ -136,3 +146,70 @@ A website that allows students to search and register for classes, administrator
 6. Do teachers have entirely separate accounts?
 7. Are teachers able to enroll students in their classes? Where would that happen?
 8. Are there any other requirements that will need to be edited?
+
+### Requirements Added by Client
+1. Each modification to classes or schedules needs to be auditable. This should include a timestamp for anytime that a class is created or modified, a student is registered or unregistered from a class, and a user identification for who performed the change.
+2. The current semester shall have a defined end (whether by date or manual), and any courses that a student is "currently" enrolled in should be moved to a history and the next semester shall start.
+
+# Project Timeline
+
+Week 1: Feb 20 - Feb 24
+
+- Intro planning phase
+- Decide on tech stack and assign team roles
+
+Week 2: Feb 27 - March 3
+
+- Complete login and landing page
+- Differentiate student and admin users
+- Specialize and split into subgroups to handle different tasks
+
+Week 3: March 6 - 10
+
+- Create all pages and make them navigable
+- Complete the basic 'Skeleton' (pages, connections, UI) of web pages
+- Develop the database
+
+Week 4: March 13 - 17
+
+- Finalize all pages to standards with nearly completed UI
+- Clean data and populate the database with classes and user accounts
+
+Week 5: March 20 - 24
+
+- Focus on back end
+- Implement class registration and removal
+- Catch-up time for completion of prior features
+
+Week 6: March 27 - 31
+
+- Complete back end functionality
+- Technical documentation for maintenance team, end users, and customers
+
+Week 7: April 3 - Apr 7
+
+- Add additional features requested during development or seen as necessary
+- Final week to add features
+- Begin hardcore QA testing and bug fixing as soon as features are complete
+
+Week 8: April 17 - 21
+
+- Polishing week
+- Continue QA testing and bug fixing
+- Focus on making the product the best version possible with minimal bugs and hazards
+- Complete technical documentation for customer, users, and maintenance team
+
+Week 9: April 24
+
+- Project Deadline. Project must be completed.
+- Present and handoff to maintenance team.
+
+# Project Team
+- Derian Mowen - Frontend Team
+- Joshua Gammon - Documentation and UI Edits
+- Lance Warden - Backend and Database
+- Matvey Popov - Backend and Database
+- Quang Le - Frontend and Project Functionality
+- Trevor Roddy - Frontend Team
+- Ty Jarrett - Teacher User Version
+- Vaughan Schulte - Note Taker
