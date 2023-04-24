@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from 'react';
-import { subjects, levels, days, pathways } from './CoursesData2';
+import { subjects, levels, days, pathways, ctimes } from './CoursesData2';
 import './CreateClassMenu.css';
 
 const DropdownMenu = (props) => {
@@ -8,6 +8,11 @@ const DropdownMenu = (props) => {
     const [selectedSubject, setSelectedSubject] = useState(null);
     const [selectedPathway, setSelectedPathway] = useState(null);
     const [selectedTerm, setSelectedTerm] = useState(null);
+    const [selectedMTime, setSelectedMTime] = useState(null);
+    const [selectedTTime, setSelectedTTime] = useState(null);
+    const [selectedWTime, setSelectedWTime] = useState(null);
+    const [selectedRTime, setSelectedRTime] = useState(null);
+    const [selectedFTime, setSelectedFTime] = useState(null);   
 
   useEffect(() => {
     props.form.Name = selectedName;
@@ -32,6 +37,26 @@ const DropdownMenu = (props) => {
 
   const handlePathwayChange = (event) => {
     setSelectedPathway(event.target.value);
+  };
+
+  const handleMTimeChange = (event) => {
+    setSelectedMTime(event.target.value);
+  };
+
+  const handleTTimeChange = (event) => {
+    setSelectedTTime(event.target.value);
+  };
+
+  const handleWTimeChange = (event) => {
+    setSelectedWTime(event.target.value);
+  };
+
+  const handleRTimeChange = (event) => {
+    setSelectedRTime(event.target.value);
+  };
+
+  const handleFTimeChange = (event) => {
+    setSelectedFTime(event.target.value);
   };
 
   const handleTermChange = (event) => {
@@ -109,6 +134,7 @@ const DropdownMenu = (props) => {
             </td>
             </tr>
         </tbody>
+        <br></br>
         </table>
         </div>
         <div className='dropdown-container'>
@@ -132,29 +158,84 @@ const DropdownMenu = (props) => {
           <tr>
             <td>
             <div className="containter">
-                    <input 
-                        placeholder="Monday Time"
-                    />
+            <select
+                className='dropdown-select'
+                value={selectedMTime || ''}
+                onChange={handleMTimeChange}
+                >
+                <option key='' value=''>
+                    Select Monday Time
+                </option>
+                {ctimes.map((item) => (
+                    <option key={item} value={item}>
+                    {item}
+                    </option>
+                ))}
+                </select>
             </div>
             <div className="containter">
-                    <input 
-                        placeholder="Tuesday Time"
-                    />
+            <select
+                className='dropdown-select'
+                value={selectedTTime || ''}
+                onChange={handleTTimeChange}
+                >
+                <option key='' value=''>
+                    Select Tuesday Time
+                </option>
+                {ctimes.map((item) => (
+                    <option key={item} value={item}>
+                    {item}
+                    </option>
+                ))}
+                </select>
             </div>
             <div className="containter">
-                    <input 
-                        placeholder="Wednesday Time"
-                    />
+            <select
+                className='dropdown-select'
+                value={selectedWTime || ''}
+                onChange={handleWTimeChange}
+                >
+                <option key='' value=''>
+                    Select Wednesday Time
+                </option>
+                {ctimes.map((item) => (
+                    <option key={item} value={item}>
+                    {item}
+                    </option>
+                ))}
+                </select>
             </div>
             <div className="containter">
-                    <input 
-                        placeholder="Thursday Time"
-                    />
+            <select
+                className='dropdown-select'
+                value={selectedRTime || ''}
+                onChange={handleRTimeChange}
+                >
+                <option key='' value=''>
+                    Select Thursday Time
+                </option>
+                {ctimes.map((item) => (
+                    <option key={item} value={item}>
+                    {item}
+                    </option>
+                ))}
+                </select>
             </div>
             <div className="containter">
-                    <input 
-                        placeholder="Friday Time"
-                    />
+            <select
+                className='dropdown-select'
+                value={selectedFTime || ''}
+                onChange={handleFTimeChange}
+                >
+                <option key='' value=''>
+                    Select Friday Time
+                </option>
+                {ctimes.map((item) => (
+                    <option key={item} value={item}>
+                    {item}
+                    </option>
+                ))}
+                </select>
             </div>
             </td>
           </tr>
