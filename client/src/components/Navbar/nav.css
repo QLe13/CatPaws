@@ -51,6 +51,8 @@
     background-color: blue;
   }
 
-  .navbar__menu-item a.selected {
-    background-color: grey;
+  .navbar__menu-item .active {
+    background-color: blue;
   }
+
+  
