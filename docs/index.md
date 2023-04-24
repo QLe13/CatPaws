@@ -36,7 +36,7 @@ We are aiming to create a simple software that supports student registration ins
 
 # User Guide
 
-Upon opening the application, a user will see a login window. After submiting their username and password, the user will be brought to either the student interface or teacher interface. See guides for each below.
+Upon opening the application, a user will see a login window. After submiting their username and password, or signing in via a google account, the user will be brought to either the student interface or teacher interface. See guides for each below.
 
 ### Student User
 
@@ -46,7 +46,7 @@ A student user will be brought to their landing page, where they will see the cl
 
 ### Teacher User
 
-Either Vaughan or Ty is supposed to be working on this. (nvm I'm just gonna do it)
+A Teacher user will be brought to a similar landing page to students, but with several different options. The Teacher will have a schedule displaying what classes they will teach this semester and next semester. This can be reached at any time through the "USER INFO" or schedule tabs located on the navbar located at the top of the screen. Teachers have three other buttons on the navbar "CREATE CLASSES", "EDIT CLASSES", and "LOGOUT". "LOGOUT" will return the user to the log in screen, where they can log back in if needed.  The "CREATE CLASSES" button allows a teacher user to create a class they will teach. Various textboxes displays the various details of a new class, including number, name, description, meeting times, and various other pertinent information. A Teacher user must merely click on one of these boxes and type in the info. After filling all relevant fields for the class, they should select the "Create" button at the bottom of the page. To edit or delete a class, one must go to the "EDIT CLASSES" page. A table of all the teacher's classes will appear. To delete a class, simply check one of the classes and hit the delete class field. To edit a class, delete it and re-create it with the same course ID, which will preserve the currently attached student and teacher users. 
 
 # Adding Users to the System
 
