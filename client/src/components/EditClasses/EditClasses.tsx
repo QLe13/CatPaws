@@ -16,7 +16,7 @@ const EditClasses = ({user}: EditClassesProps) => {
   return (
     <div>
       <div className="register_container">
-        <h1>Register for Classes</h1>
+        <h1>Edit your classes</h1>
       </div>
       <BasicRTable saved={teachingClasses}/>
       <div className="register_container">
