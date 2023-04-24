@@ -48,11 +48,11 @@
   }
   
   .navbar__menu-item a:hover {
-    background-color: blue;
+    background-color: #00348e;
   }
 
   .navbar__menu-item .active {
-    background-color: blue;
+    background-color: #00348e;
   }
 
   
