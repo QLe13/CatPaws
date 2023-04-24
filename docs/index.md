@@ -107,10 +107,6 @@ If you would like to adjust the start and end times of your semesters, you will 
 }
 ```
 
-# FAQ
-
-1. Do we actually have anything to put here? Are there frequent situations we ran into that we could help people with?
-
 # Requirements
 
 ### Original Client Requirements:
@@ -132,10 +128,14 @@ A website that allows students to search and register for classes, administrator
 
 ### Client Meeting One
 1. Could we change the color of the buttons? The greyed out buttons make them look unclickable.
-2. There were others. I have them written down somewhere.
+2. How do you define and achieve efficiency?
+3. Will you do a search bar? If so, how?
+4. How will students "favorite" classes before registering?
 
 ### Client Meeting Two
-1. Was not present. Will have to ask Derian if he knows what questions we were asked (or feedback we received).
+1. UI looks good. Still concerned about the clarity of the buttons.
+2. Why did you decide to remove waitlisting?
+3. Are you still on schedule? What have you fallen behind on?
 
 ### Client Meeting Three
 1. Will you be implementing a search bar when searching for classes?
@@ -146,3 +146,17 @@ A website that allows students to search and register for classes, administrator
 6. Do teachers have entirely separate accounts?
 7. Are teachers able to enroll students in their classes? Where would that happen?
 8. Are there any other requirements that will need to be edited?
+
+### Requirements Added by Client
+1. Each modification to classes or schedules needs to be auditable. This should include a timestamp for anytime that a class is created or modified, a student is registered or unregistered from a class, and a user identification for who performed the change.
+2. The current semester shall have a defined end (whether by date or manual), and any courses that a student is "currently" enrolled in should be moved to a history and the next semester shall start.
+
+# Project Team
+- Derian Mowen - Frontend Team
+- Joshua Gammon - Documentation and UI Edits
+- Lance Warden - Backend and Database
+- Matvey Popov - Backend and Database
+- Quang Le - Frontend and Project Functionality
+- Trevor Roddy - Frontend Team
+- Ty Jarrett - Teacher User Version
+- Vaughan Schulte - Note Taker
