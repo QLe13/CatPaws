@@ -2,14 +2,11 @@
 
 # Project Description
 
-The goal of this project is to create a lightweight and easy to use software for class registration in a higher education setting. By restricting the scope to our client's requirements, we can create a reliable service that avoids unnecessary feature bloating. 
+The objective of this project is to develop a user-friendly and efficient software solution for class registration in a higher education environment. Our focus is to deliver a lightweight and reliable service that fulfills our client's specific requirements without adding unnecessary features that can complicate the user experience.
 
-There are a number of existing services that we will take positive and negative inspiration from. Examples include Trinity University's TigerPaws and the Texas public-school service Skyward. However, these applications contain a number of issues that we will seek to avoid. These include:
-1. Unintuitive or unattractive user interfaces.
-2. Unnecessary features that either slow down the software or confuse users.
-3. Other frustrating quirks like multiple navigation pages, frequently opening new tabs, and restrictive pre-requisite checking.
+We will draw inspiration from existing registration services such as TigerPaws from Trinity University and Skyward from Texas public schools. However, we will avoid common issues identified in these applications, such as unintuitive interfaces, feature bloat, and frustrating quirks that slow down or confuse users.
 
-We are aiming to create a simple software that supports student registration instead of adding stress to an already chaotic time.
+Our main goal is to create a straightforward software that simplifies the registration process and helps students navigate through their course selection with ease. We aim to reduce stress and frustration during the hectic time of class registration by providing a seamless and intuitive user experience.
 
 # Tech Stack
 
@@ -40,13 +37,23 @@ Upon opening the application, a user will see a login window. After submiting th
 
 ### Student User
 
-A student user will be brought to their landing page, where they will see the classes that they are currently taking. By clicking the buttons above the table, they will be able to switch between classes for the current semester and classes for the next semester. Students have two other pages to interact with: "FIND CLASSES" and "REGISTRATION." From the registration page, students are able to use the drop down and data entry fields to search for specific classes are groups of classes. When they find a class or classes that they want to register for, a student must check the "Register" field and hit "Add to Registration List" at the bottom of the page. This will add the classes to their registration page. Once a student adds all of their classes, they can navigate to the "REGISTRATION" page to register for them. To do this, check the "Register" field next to each class and hit "Register" at the bottom of the page.
+Upon logging in, students will be directed to their landing page, which displays the classes they are currently enrolled in. They can navigate between classes for the current semester and classes for the next semester by clicking on the buttons located above the table.
+
+There are two additional pages available for student use: "FIND CLASSES" and "REGISTRATION." From the "REGISTRATION" page, students can search for specific classes or groups of classes by using the drop-down and data entry fields. Once they have found a class or classes they want to register for, they must check the "Register" field and hit "Add to Registration List" located at the bottom of the page. This will add the selected classes to their registration list.
+
+Once all desired classes have been added to the registration list, students can navigate to the "REGISTRATION" page to complete the registration process. To register for the classes on the list, they must check the "Register" field next to each class and hit the "Register" button at the bottom of the page.
+
+**It's important to note that students should review their registration list carefully to ensure that the classes they have selected do not conflict with each other. Additionally, students must meet any prerequisites or eligibility requirements for the classes they wish to register for. CSpace does not have active checking for conflicts.
 
 - For more information please see: [CSpace Navigation Guide and UI Testing](https://docs.google.com/document/d/112cDOXjSEEQH53L2FZ-bB3xaDKEE_CuiTwiG8daQkQ4/edit?usp=sharing)
 
 ### Teacher User
 
-Either Vaughan or Ty is supposed to be working on this. (nvm I'm just gonna do it)
+Upon logging in, teachers will be directed to their landing page, which displays the classes they are currently teaching and the classes they will teach next semester. To add or edit classes, teachers can navigate to the "CREATE CLASSES" and "EDIT CLASSES" pages.
+
+On the "CREATE CLASSES" page, teachers can create a new class by interacting with the drop-down and data entry fields. They can provide all the relevant information, such as course name, course code, class schedule, and any other required details. Similarly, on the "EDIT CLASSES" page, teachers can make changes to an existing class by selecting the class they want to edit.
+
+**Please note that teachers should double-check all the information entered before submitting it. Currently, CSpace does not offer data validation or checking, so it's crucial to ensure that all the information provided is accurate and complete.
 
 # Adding Users to the System
 
