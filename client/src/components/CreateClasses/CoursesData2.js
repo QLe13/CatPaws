@@ -83,5 +83,6 @@ const pathways = ["Humanities","Creative Expression","Social/Behavioral Sciences
                   , "Written Communication", "Oral and Visual Communication","Digital Literacy","Global Awareness",
                   "Understanding Diversity", "Foreign Language", "Historical Perspective", "Fitness Education"]
 
+const ctimes = ["8:30am-9:20am", "9:30am-10:20am", "10:30am-11:20am", "11:30am-12:20pm", "12:30pm-1:20pm", "1:30pm-2:20pm", "2:30pm-3:20pm", "3:30pm-4:20pm", "4:30pm-5:20pm", "Empty"]
 
-module.exports = {subjects, levels, days,pathways}
+module.exports = {subjects, levels, days,pathways, ctimes}
