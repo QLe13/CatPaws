@@ -134,6 +134,7 @@ const DropdownMenu = (props) => {
             </td>
             </tr>
         </tbody>
+        <br></br>
         </table>
         </div>
         <div className='dropdown-container'>
