@@ -89,10 +89,9 @@ To add a teacher user, navigate to the `faculty.json` file. Here you can manuall
 },
 ```
 
-# Changing Semesters
+# Editing Semesters
 
-At the moment, the registration semesters must be changed manually. First, navigate to the `seasons.json` file. Now you must ...
-I CONFUSED BY HOW THE DATES WORK. WHAT IS SUPPOSED TO BE MANUALLY CHANGED IT KINDA ALL SEEMS RIGHT. DO WE NEED TO CHANGE THE ORDER OF THEM SO THAT THE UI PRESENTS THEM DIFFERENTLY?
+If you would like to adjust the start and end times of your semesters, you will have to manually do so in `seasons.json` file. The current semester that is displayed in the web app is determined by the `utils.ts` function `getCurSemester` uses the `end` data in the `seasons.json` file. 
 
 # Testing
 
