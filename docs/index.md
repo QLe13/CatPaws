@@ -91,17 +91,21 @@ To add a teacher user, navigate to the `faculty.json` file. Here you can manuall
 
 # Editing Semesters
 
-If you would like to adjust the start and end times of your semesters, you will have to manually do so in `seasons.json` file. The current semester that is displayed in the web app is determined by the `utils.ts` function `getCurSemester` uses the `end` data in the `seasons.json` file. 
+If you would like to adjust the start and end times of your semesters, you will have to manually do so in `seasons.json` file. The current semester that is displayed in the web app is determined by the `~/client/utils.ts` function `getCurSemester` uses the `end` data in the `seasons.json` file. 
 
 # Testing
 
 [CSpace Navigation Guide and UI Testing](https://docs.google.com/document/d/112cDOXjSEEQH53L2FZ-bB3xaDKEE_CuiTwiG8daQkQ4/edit?usp=sharing)
 
-# Issues We Encountered
+# Frequently Encountered Issues
 
 1. Firebase install sometimes returns authorization issues. This seems to be a MacOS issue. Running `sudo install` for the package helps.
-2. There seems to be conversion issues from typescript to React. This is either a Firebase or MacOS issue. Trevor Roddy knows the fix.
-3. Couldn't do drop downs to hide large text blocks in our documentation. Seems to be an issue where either Github Pages or Cayman Jekyll theme doesn't translate the html formatting well.
+2. There seems to be conversion issues from typescript to React. This is a typescript version issue (usually affecting MacOS). It can be fixed by ensuring the correct typescript version is added to the `package.json` files in both the root and client directories. See below:
+```
+"devDependencies": {
+  "typescript": "^4.0.0"
+}
+```
 
 # FAQ
 
