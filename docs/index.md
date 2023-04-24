@@ -155,7 +155,7 @@ A website that allows students to search and register for classes, administrator
 
 Week 1: Feb 20 - Feb 24
 
-- Into planning phase
+- Intro planning phase
 - Decide on tech stack and assign team roles
 
 Week 2: Feb 27 - March 3
