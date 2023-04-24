@@ -5,5 +5,8 @@
 	"scripts": {
 		"build": "cd client && npm run build",
 		"deploy": "npm run build && firebase deploy"
+	},
+	"devDependencies": {
+		"typescript": "^4.0.0"
 	}
 }
