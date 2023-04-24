@@ -154,44 +154,53 @@ A website that allows students to search and register for classes, administrator
 # Project Timeline
 
 Week 1: Feb 20 - Feb 24
+
 -Into planning phase
 -Decide on tech stack and assign team roles
 
 Week 2: Feb 27 - March 3
+
 -Complete login and landing page
 -Differentiate student and admin users
 -Specialize and split into subgroups to handle different tasks
 
 Week 3: March 6 - 10
+
 -Create all pages and make them navigable
 -Complete the basic 'Skeleton' (pages, connections, UI) of web pages
 -Develop the database
 
 Week 4: March 13 - 17
+
 -Finalize all pages to standards with nearly completed UI
 -Clean data and populate the database with classes and user accounts
 
 Week 5: March 20 - 24
+
 -Focus on back end
 -Implement class registration and removal
 -Catch-up time for completion of prior features
 
 Week 6: March 27 - 31
+
 -Complete back end functionality
 -Technical documentation for maintenance team, end users, and customers
 
 Week 7: April 3 - Apr 7
+
 -Add additional features requested during development or seen as necessary
 -Final week to add features
 -Begin hardcore QA testing and bug fixing as soon as features are complete
 
 Week 8: April 17 - 21
+
 -Polishing week
 -Continue QA testing and bug fixing
 -Focus on making the product the best version possible with minimal bugs and hazards
 -Complete technical documentation for customer, users, and maintenance team
 
 Week 9: April 24
+
 -Project Deadline. Project must be completed.
 -Present and handoff to maintenance team.
 
