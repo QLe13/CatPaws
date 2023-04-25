@@ -1,23 +1,30 @@
 import React from 'react';
-import './nav.css';
 import { signOut } from 'firebase/auth';
 import { auth } from '../../firebase';
+import { NavLink } from 'react-router-dom';
 
-const NavBar = ({ isTeacher }) => {
+
+const NavBar = ({ isTeacher, currentPage }) => {
+
+  if (isTeacher)
+    require('./teacher-nav.css');
+  else
+    require('./nav.css');
+
   return (
     <nav className="navbar">
       <ul className="navbar__menu">
         <li className="navbar__menu-item">
-          <a href="/">User Info</a>
+          <NavLink to="/" exact activeClassName="active">User Info</NavLink>
         </li>
         <li className="navbar__menu-item">
-          <a href="/schedule">Schedule</a>
+          <NavLink to="/schedule" exact activeClassName="active">Schedule</NavLink>
         </li>
         <li className="navbar__menu-item">
-          <a href={!isTeacher ? "/findclasses" : "/createclasses"}>{!isTeacher ? "Find Classes" : "Create Classes"}</a>
+          <NavLink to={!isTeacher ? "/findclasses" : "/createclasses"} exact activeClassName="active">{!isTeacher ? "Find Classes" : "Create Classes"}</NavLink>
         </li>
         <li className="navbar__menu-item">
-          <a href={!isTeacher ? "/register": "/editclasses"}>{!isTeacher?"Registration":"Edit Classes"}</a>
+          <NavLink to={!isTeacher ? "/register": "/editclasses"} exact activeClassName="active">{!isTeacher?"Registration":"Edit Classes"}</NavLink>
         </li>
         <li className="navbar__menu-item">
           <a href="/" onClick={() => {

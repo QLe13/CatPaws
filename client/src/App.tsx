@@ -70,7 +70,7 @@ const App = () => {
     return (
       <div>
         <Router>
-          <NavBar isTeacher={user.isTeacher} />
+          <NavBar isTeacher={user.isTeacher} currentPage='register' />
           <Routes>
             <Route path="/" element={<Landing user={user} />} />
             <Route path="/schedule" element={<Landing user={user} />} />
