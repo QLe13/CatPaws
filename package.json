@@ -1,9 +1,14 @@
 {
-	"dependencies": {
-		"firebase-admin": "^11.6.0"
-	},
+	"workspaces": [
+		"cspace-firebase",
+		"client"
+	],
 	"scripts": {
 		"build": "cd client && npm run build",
-		"deploy": "npm run build && firebase deploy"
+		"dev": "cd client && npm run dev",
+		"deploy": "cd ./cspace-firebase && npm run deploy"
+	},
+	"devDependencies": {
+		"typescript": "^5.0.2"
 	}
 }

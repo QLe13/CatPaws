@@ -1,0 +1,19 @@
+{
+	"name": "cspace-firebase",
+	"version": "0.0.0",
+	"private": true,
+	"main": "main.ts",
+	"type": "module",
+	"dependencies": {
+		"firebase-admin": "^11.6.0"
+	},
+	"scripts": {
+		"start": "tsx main.ts",
+		"build": "cd ../client && npm run build",
+		"deploy": "npm run build && firebase deploy"
+	},
+	"devDependencies": {
+		"tsx": "^3.12.6",
+		"typescript": "^5.0.2"
+	}
+}
