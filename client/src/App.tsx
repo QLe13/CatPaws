@@ -10,7 +10,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { auth, db } from "./firebase";
 import { getDoc, doc, setDoc } from "firebase/firestore/lite";
 
-import { getRedirectResult, onAuthStateChanged } from "firebase/auth";
+import { onAuthStateChanged } from "firebase/auth";
 
 const App = () => {
   // loading state for user data fetching
@@ -70,14 +70,17 @@ const App = () => {
     return (
       <div>
         <Router>
-          <NavBar isTeacher={user.isTeacher} currentPage='register' />
+          <NavBar isTeacher={user.isTeacher} /* currentPage='register' */ />
           <Routes>
             <Route path="/" element={<Landing user={user} />} />
             <Route path="/schedule" element={<Landing user={user} />} />
             <Route path="/register" element={<Register user={user} />} />
-            <Route path="/createclasses" element={<CreateClasses user={user} />} />
+            <Route
+              path="/createclasses"
+              element={<CreateClasses user={user} />}
+            />
             <Route path="/findclasses" element={<FindClasses user={user} />} />
-            <Route path="/editclasses" element={<EditClasses user={user}/>} />
+            <Route path="/editclasses" element={<EditClasses user={user} />} />
           </Routes>
         </Router>
       </div>

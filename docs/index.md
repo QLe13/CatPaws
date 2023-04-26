@@ -1,6 +1,6 @@
 # CSpace
 
-# Project Description
+## Project Description
 
 The objective of this project is to develop a user-friendly and efficient software solution for class registration in a higher education environment. Our focus is to deliver a lightweight and reliable service that fulfills our client's specific requirements without adding unnecessary features that can complicate the user experience.
 
@@ -8,30 +8,73 @@ We will draw inspiration from existing registration services such as TigerPaws f
 
 Our main goal is to create a straightforward software that simplifies the registration process and helps students navigate through their course selection with ease. We aim to reduce stress and frustration during the hectic time of class registration by providing a seamless and intuitive user experience.
 
-# Tech Stack
+## Tech Stack
 
-- React - Frontend for dynamic pages - [React Docs](https://react.dev/blog/2023/03/16/introducing-react-dev)
-- ExpressJS - Web application framework 
-- NodeJS - Server functionality
-- Firebase - Backend / database management - [Firebase Docs](https://firebase.google.com/docs)
+- React - Dynamic user interface - [React Docs](https://react.dev/blog/2023/03/16/introducing-react-dev)
+- NodeJS - Server hosting, maintenance, and advanced administration
+- Firebase - Authorization, database management, and administration - [Firebase Docs](https://firebase.google.com/docs)
 
-# Installation Guide
+## Guide for Intitutions and Organizations
 
-### Client
+First, you have to create a firebase project and enable the following services:
 
-- Install [node.js](https://nodejs.org/en/)
-- `cd client`
+- Authentication: Email/Password, Google
+- Firestore
+
+If you want to host the application on firebase, you also need to enable:
+
+- Hosting
+
+### Host with Your Own Server
+
+- Open a terminal in the server environment you wish to use
+- Install [node.js](https://nodejs.org/en/) on your server if you haven't already.
+- Clone the repository to your server, i.e. `git clone https://github.com/QLe13/CatPaws.git`
+- Navigate to the root directory of the project, i.e. `cd CatPaws`
+- Navigate to the 'client' directory of the project, i.e. `cd client`
 - Run `npm install` to install dependencies.
-- Run `npm start` to start a local development server.
+- Run `npm build` to build the production application.
+- Use a static server of your choice to serve the application
 
-### Firebase
+for example, to serve with with npm `serve` on port 8580 with HTTPS:
+
+- `npm install -g serve`
+- `serve -s dist --listen 8580 --ssl-cert "/etc/ssl/certs/mycert.crt" --ssl-key "/etc/ssl/private/mykey.key"`
+
+### Host with Firebase
+
+- Install [node.js](https://nodejs.org/en/) if you haven't already.
+- Run `npm install` in the root directory of the project
+- Run `npm install -g firebase-tools` to install the firebase client.
+- Run `firebase login` to login to firebase.
+- Navigate to the `cspace-firebase` directory, i.e. `cd cspace-firebase`
+- Replace `cspace-51bd4` in the `.firebaserc` file with your firebase project id.
+- Run `npm run deploy` to deploy firebase project.
+
+## Developer Guide
+
+If you are developing this project for your own institution or organization, follow the same steps as above to setup your own firebase project.
+
+If you are developing this project to make public upstream changes, you may use the pre-configured firebase project to test your changes. Please contact the project owner for necessary access to the firebase project. Once any changes are merged into the main branch, your changes will be in the next firebase deployment.
+
+### Develop UI & Client
+
+- Install [node.js](https://nodejs.org/en/) if you haven't already.
+- Clone this repository and navigate to the root directory of the project.
+- Navigate to the 'client' directory of the project, i.e. `cd client`
+- Run `npm install` to install dependencies.
+- Run `npm run dev` to start a local hot-reload development server.
+
+### Deploy to Firebase
 
 - Run `npm install` in the root directory of the project
 - Run `npm install -g firebase-tools` to install the firebase client.
 - Run `firebase login` to login to firebase.
+- Navigate to the `cspace-firebase` directory, i.e. `cd cspace-firebase`
+- Replace `cspace-51bd4` in the `.firebaserc` file with your firebase project id if you are not using the pre-configured firebase project.
 - Run `npm run deploy` to deploy firebase project.
 
-# User Guide
+## User Guide
 
 Upon opening the application, a user will see a login window. After submiting their username and password, or signing in via a google account, the user will be brought to either the student interface or teacher interface. See guides for each below.
 
@@ -55,89 +98,81 @@ On the "CREATE CLASSES" page, teachers can create a new class by interacting wit
 
 **Please note that teachers should double-check all the information entered before submitting it. Currently, CSpace does not offer data validation or checking, so it's crucial to ensure that all the information provided is accurate and complete.
 
-# Adding Users to the System
+## Administration and Management
 
-At the moment, all users need to be manually added to the system. See guides below for adding student and teacher users.
+For advanced usage, once you have made all of the changes to the files you wish to make, you can deploy the changes to firebase by following the steps below.
 
-### Adding Student User
+- Make sure you are in the `cspace-firebase` directory
+- Make sure you have NodeJS and firebase-tools installed and configured
+- Run `npm start` to make the changes to your firebase project
 
-To add a student user, navigate to the `users.json` file. Here you can manually create a new user by follow the below template:
-```
-{
-  "uid": "[the user's id]",
-  "username": "[the user's username]",
-  "password": "[the user's password]",
-  "classes": [
-  ],
-  "waitlisted": [
-  ],
-  "saved": [
-  ]
-},
-```
+### Managing Users
 
-### Adding Teacher User
+- (Recommended) Add a user to firebase authentication via the firebase console, and if you do not wish to use the default user data, create an entry for the user in firestore `users` collection with the same uid.
+- Advanced Usage
+  - Navigate to the `cspace-firebase` directory
+  - Edit the `students.json` file to manage student users, following the examples provided in the file.
+  - Edit the `teachers.json` file to manage student users, following the examples provided in the file.
 
-To add a teacher user, navigate to the `faculty.json` file. Here you can manually create a new user by follow the below template:
-```
-{
-  "uid": "[the user's id]",
-  "username": "[the user's username]",
-  "password": "[the user's password]",
-  "classes": [
-  ]
-},
-```
+### Managing Semesters
 
-# Editing Semesters
+- (Recommended) Add a semester to firestore `seasons` collection via the firebase console, or edit the existing semesters.
+- Advanced Usage
+  - Follow the example in the `seasons.json` file.
+  - Note: The current semester that is displayed in the web app is determined by the `end` date in the `seasons.json` file.
 
-If you would like to adjust the start and end times of your semesters, you will have to manually do so in `seasons.json` file. The current semester that is displayed in the web app is determined by the `~/client/utils.ts` function `getCurSemester` uses the `end` data in the `seasons.json` file. 
+### Managing Classes
 
-# Testing
+- (Recommended) Add a class to firestore `classes` collection via the firebase console, or edit the existing classes.
+- Advanced Usage
+  - Follow the example in the `classes.json` file.
+  - Edit the `main.ts` file in to manage which semesters are populated with the classes.
+
+## Testing
 
 [CSpace Navigation Guide and UI Testing](https://docs.google.com/document/d/112cDOXjSEEQH53L2FZ-bB3xaDKEE_CuiTwiG8daQkQ4/edit?usp=sharing)
 
-# Frequently Encountered Issues
+## Frequently Encountered Issues
 
 1. Firebase install sometimes returns authorization issues. This seems to be a MacOS issue. Running `sudo install` for the package helps.
-2. There seems to be conversion issues from typescript to React. This is a typescript version issue (usually affecting MacOS). It can be fixed by ensuring the correct typescript version is added to the `package.json` files in both the root and client directories. See below:
-```
-"devDependencies": {
-  "typescript": "^4.0.0"
-}
-```
 
-# Requirements
+## Project Requirements
 
-### Original Client Requirements:
+### Original Client Requirements
+
 A website that allows students to search and register for classes, administrators to add/delete classes, and students to view their current classes.
 
-### Functional Requirements:
+### Functional Requirements
+
 1. Student Registration: The system should allow students to register for classes, view their class schedules, and drop or add courses.
 2. Faculty Registration: The system should allow faculty members to view their schedules, access/add/delete course information.
 3. Course Management: The system should allow faculty to add classes and manage course details such as course information, location, schedule.
 
-### Non-functional Requirements:
+### Non-functional Requirements
+
 1. Security: The system should be secure, with authentication and authorization measures in place to prevent unauthorized access and protect sensitive data.
 2. Performance: The system should be able to handle a large number of simultaneous users without performance degradation.
 3. Reliability: The system should be reliable and available 24/7, with a minimum of downtime for maintenance.
 4. Usability: The system should be easy to use and intuitive, with clear instructions and help resources available for users.
-6. Scalability: The system should be scalable, able to handle a growing number of users and courses.
+5. Scalability: The system should be scalable, able to handle a growing number of users and courses.
 
-# Modifications from the Client
+## Modifications from the Client
 
 ### Client Meeting One
+
 1. Could we change the color of the buttons? The greyed out buttons make them look unclickable.
 2. How do you define and achieve efficiency?
 3. Will you do a search bar? If so, how?
 4. How will students "favorite" classes before registering?
 
 ### Client Meeting Two
+
 1. UI looks good. Still concerned about the clarity of the buttons.
 2. Why did you decide to remove waitlisting?
 3. Are you still on schedule? What have you fallen behind on?
 
 ### Client Meeting Three
+
 1. Will you be implementing a search bar when searching for classes?
 2. It is a little unclear which tab you are currently on. Could you opt for a third color instead of blue and grey?
 3. When/how does the semester change (ie current and future semester)?
@@ -148,10 +183,11 @@ A website that allows students to search and register for classes, administrator
 8. Are there any other requirements that will need to be edited?
 
 ### Requirements Added by Client
+
 1. Each modification to classes or schedules needs to be auditable. This should include a timestamp for anytime that a class is created or modified, a student is registered or unregistered from a class, and a user identification for who performed the change.
 2. The current semester shall have a defined end (whether by date or manual), and any courses that a student is "currently" enrolled in should be moved to a history and the next semester shall start.
 
-# Project Timeline
+## Project Timeline
 
 Week 1: Feb 20 - Feb 24
 
@@ -204,7 +240,8 @@ Week 9: April 24
 - Project Deadline. Project must be completed.
 - Present and handoff to maintenance team.
 
-# Project Team
+## Project Team
+
 - Derian Mowen - Frontend Team
 - Joshua Gammon - Documentation and UI Edits
 - Lance Warden - Backend and Database
