@@ -1,72 +1,64 @@
 .fclass__container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fclass__table {
+  margin: 2rem auto;
+  max-width: 900px;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.fclass__table th,
+.fclass__table td {
+  border: 1px solid black;
+  padding: 0.5rem;
+  text-align: left;
+  border: 1px solid var(--primary-color-alpha);
+}
+.fclass__table th {
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: var(--primary-color-alpha);
+  color: black;
+}
+.fclass__table td {
+  background-color: #f9f9f9;
+  color: #555;
+}
+.fclass__table td:first-child {
+  font-weight: bold;
+}
+@media (max-width: 768px) {
   .fclass__table {
-    margin: 2rem auto;
-    max-width: 900px;
-    width: 100%;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8rem;
   }
-  
-  .fclass__table th,
-  .fclass__table td {
-    border: 1px solid black;
-    padding: 0.5rem;
-    text-align: left;
-    border: 1px solid var(--primary-color-alpha);
-  }
-  
-  .fclass__table th {
-    font-weight: bold;
-    text-transform: uppercase;
-    background-color: var(--primary-color-alpha);
-    color: black;
-  }
-  
-  .fclass__table td {
-    background-color: #f9f9f9;
-    color: #555;
-  }
-  
-  .fclass__table td:first-child {
-    font-weight: bold;
-  }
-  
-  @media (max-width: 768px) {
-    .fclass__table {
-      font-size: 0.8rem;
-    }
-  }
-  
-  
-  .fclass-container-button {
-    margin-top: 2rem;
-    display: flex;
-    justify-content: flex-start;
-  }
-  
-  .fclass-container-button button {
-    border-radius: 4px;
-    background: #78a5f3;
-    border: 1px solid;
-    color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 500;
-    padding: 0.7rem 1.2rem;
-    outline: none;
-    cursor: pointer;
-    transition: 0.3s ease;
-  }
-  .fclass-container-button button:hover {
-    background: #9cb3db;
-  }
-  .fclass_container {
-    width: fit-content;
-    margin: auto;
-    height: 100%;
-    display: flex;
-    align-items: center;
-  }
-  
+}
+.fclass-container-button {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: flex-start;
+}
+.fclass-container-button button {
+  border-radius: 4px;
+  background: #78a5f3;
+  border: 1px solid;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  padding: 0.7rem 1.2rem;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.fclass-container-button button:hover {
+  background: #9cb3db;
+}
+.fclass_container {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}

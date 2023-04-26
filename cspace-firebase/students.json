@@ -1,0 +1,150 @@
+{
+  "1": {
+    "username": "user1",
+    "password": "password1",
+    "classes": [
+      "spring2023/CSCI-1120",
+      "fall2022/CSCI-1300",
+      "fall2022/CSCI-1304",
+      "fall2022/CSCI-1311"
+    ],
+    "waitlisted": [
+      "spring2023/CSCI-1300"
+    ],
+    "saved": [
+      "fall2023/CSCI-1304",
+      "fall2023/CSCI-1311"
+    ]
+  },
+  "2": {
+    "username": "user2",
+    "password": "password2",
+    "classes": [
+      "spring2023/CSCI-1312",
+      "fall2022/CSCI-1320"
+    ],
+    "waitlisted": [
+      "spring2023/CSCI-1320"
+    ],
+    "saved": []
+  },
+  "3": {
+    "username": "user3",
+    "password": "password3",
+    "classes": [
+      "spring2023/CSCI-1321",
+      "spring2023/CSCI-1323",
+      "fall2022/CSCI-2094",
+      "fall2022/CSCI-2195",
+      "fall2022/CSCI-2320"
+    ],
+    "waitlisted": [],
+    "saved": [
+      "fall2023/CSCI-2094",
+      "fall2023/CSCI-2195",
+      "fall2023/CSCI-2320"
+    ]
+  },
+  "4": {
+    "username": "user4",
+    "password": "password4",
+    "classes": [
+      "spring2023/CSCI-2321",
+      "fall2022/CSCI-2322"
+    ],
+    "waitlisted": [],
+    "saved": [
+      "fall2023/CSCI-2322"
+    ]
+  },
+  "5": {
+    "username": "user5",
+    "password": "password5",
+    "classes": [
+      "spring2023/CSCI-2323",
+      "fall2022/CSCI-2324",
+      "fall2022/CSCI-3090"
+    ],
+    "waitlisted": [
+      "spring2023/CSCI-2324"
+    ],
+    "saved": [
+      "fall2023/CSCI-3090"
+    ]
+  },
+  "6": {
+    "username": "user6",
+    "password": "password6",
+    "classes": [
+      "spring2023/CSCI-3094",
+      "fall2022/CSCI-3190",
+      "fall2022/CSCI-3193"
+    ],
+    "waitlisted": [],
+    "saved": [
+      "fall2023/CSCI-3190",
+      "fall2023/CSCI-3193"
+    ]
+  },
+  "7": {
+    "username": "user7",
+    "password": "password7",
+    "classes": [
+      "spring2023/CSCI-3194",
+      "fall2022/CSCI-3195"
+    ],
+    "waitlisted": [],
+    "saved": [
+      "fall2023/CSCI-3195"
+    ]
+  },
+  "8": {
+    "username": "user8",
+    "password": "password8",
+    "classes": [
+      "spring2023/CSCI-3196",
+      "fall2022/CSCI-3197",
+      "fall2022/CSCI-3215"
+    ],
+    "waitlisted": [
+      "spring2023/CSCI-3197"
+    ],
+    "saved": [
+      "fall2023/CSCI-3215"
+    ]
+  },
+  "9": {
+    "username": "user9",
+    "password": "password9",
+    "classes": [
+      "spring2023/CSCI-3290",
+      "spring2023/CSCI-3293",
+      "fall2022/CSCI-3294",
+      "fall2022/CSCI-3295"
+    ],
+    "waitlisted": [],
+    "saved": [
+      "fall2023/CSCI-3294",
+      "fall2023/CSCI-3295"
+    ]
+  },
+  "10": {
+    "username": "user10",
+    "password": "password10",
+    "classes": [
+      "spring2023/CSCI-3296",
+      "fall2022/CSCI-3297",
+      "fall2022/CSCI-3311",
+      "fall2022/CSCI-3312",
+      "fall2022/CSCI-3320"
+    ],
+    "waitlisted": [
+      "spring2023/CSCI-3297"
+    ],
+    "saved": [
+      "fall2023/CSCI-3311",
+      "fall2023/CSCI-3312",
+      "fall2023/CSCI-3320"
+    ]
+  }
+}
