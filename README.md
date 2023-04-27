@@ -7,7 +7,7 @@
 - install [node.js](https://nodejs.org/en/)
 - `cd client`
 - run `npm install` to install dependencies
-- run `npm start` to start a local development server
+- run `npm run dev` to start a local development server
 
 ### firebase
 
