@@ -6,7 +6,7 @@
 
 - Install [node.js](https://nodejs.org/en/)
 - Clone the "CatPaws" Repository and navigate to the root directory
-- Run `cd client` to navigaate to the client directory of the project
+- Run `cd client` to navigate to the client directory of the project
 - Run `npm install` to install dependencies
 - Run `npm run dev` to start a local development server
 
