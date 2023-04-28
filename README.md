@@ -10,7 +10,7 @@
 - Run `npm install` to install dependencies
 - Run `npm run dev` to start a local development server
 
-### firebase
+### Firebase
 
 - Run `npm install` in the root directory of this project
 - Run `npm install -g firebase-tools` to install the Firebase cli
