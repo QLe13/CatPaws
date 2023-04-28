@@ -1,14 +1,14 @@
+import { doc, getDoc, setDoc } from "firebase/firestore/lite";
 import React from "react";
-import Landing from "./components/Landing/Landing";
-import Register from "./components/Register/Register";
-import FindClasses from "./components/FindClasses/FindClasses";
-import NavBar from "./components/Navbar/NavBar";
-import Auth from "./components/Landing/Auth";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import CreateClasses from "./components/CreateClasses/CreateClasses";
 import EditClasses from "./components/EditClasses/EditClasses";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import FindClasses from "./components/FindClasses/FindClasses";
+import Auth from "./components/Landing/Auth";
+import Landing from "./components/Landing/Landing";
+import NavBar from "./components/Navbar/NavBar";
+import Register from "./components/Register/Register";
 import { auth, db } from "./firebase";
-import { getDoc, doc, setDoc } from "firebase/firestore/lite";
 
 import { onAuthStateChanged } from "firebase/auth";
 
@@ -28,7 +28,7 @@ const App = () => {
           authUser.displayName !== user?.username)
       ) {
         const userDoc = await getDoc(doc(db, "users", authUser.uid));
-        var dbUser: UserData;
+        let dbUser: UserData;
         if (!userDoc.exists()) {
           dbUser = {
             isTeacher: false,
@@ -60,6 +60,8 @@ const App = () => {
     });
   }, []);
 
+  console.log(user);
+
   if (loading) {
     return <div>Loading...</div>;
   } else {
@@ -73,7 +75,6 @@ const App = () => {
           <NavBar isTeacher={user.isTeacher} /* currentPage='register' */ />
           <Routes>
             <Route path="/" element={<Landing user={user} />} />
-            <Route path="/schedule" element={<Landing user={user} />} />
             <Route path="/register" element={<Register user={user} />} />
             <Route
               path="/createclasses"
