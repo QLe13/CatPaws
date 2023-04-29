@@ -1,15 +1,14 @@
-import { useEffect } from "react";
-import { useState } from "react";
-import "./Auth.css";
-import { auth, googleProvider } from "../../firebase";
 import {
+  AuthError,
   getRedirectResult,
   signInWithEmailAndPassword,
   signInWithRedirect,
-  AuthError,
 } from "firebase/auth";
+import { useEffect, useState } from "react";
 import { redirect } from "react-router-dom";
+import { auth, googleProvider } from "../../firebase";
 import { useFormState } from "../../utils";
+import "./Auth.css";
 
 const initialState = {
   email: "",

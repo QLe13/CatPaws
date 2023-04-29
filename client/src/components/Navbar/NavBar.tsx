@@ -1,6 +1,6 @@
 import { signOut } from "firebase/auth";
-import { auth } from "../../firebase";
 import { NavLink } from "react-router-dom";
+import { auth } from "../../firebase";
 
 const NavBar = ({ isTeacher /* currentPage */ }) => {
   if (isTeacher) import("./teacher-nav.css");
@@ -13,12 +13,7 @@ const NavBar = ({ isTeacher /* currentPage */ }) => {
       <ul className="navbar__menu">
         <li className="navbar__menu-item">
           <NavLink to="/" className={class_name}>
-            User Info
-          </NavLink>
-        </li>
-        <li className="navbar__menu-item">
-          <NavLink to="/schedule" className={class_name}>
-            Schedule
+            Landing
           </NavLink>
         </li>
         <li className="navbar__menu-item">
