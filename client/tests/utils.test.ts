@@ -41,7 +41,7 @@ jest.mock('../src/utils', () => {
         })
     }
 })
-
+// Utilities testing suite
 describe("Testing utilities", () => {
     describe("Testing getCurSemester", () => {
         it("Should return current semester", async () => {
