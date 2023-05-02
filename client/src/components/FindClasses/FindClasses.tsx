@@ -1,18 +1,18 @@
-import { useState, useEffect } from "react";
+import {
+  QueryFieldFilterConstraint,
+  collection,
+  doc,
+  getDocs,
+  query,
+  updateDoc,
+  where,
+} from "firebase/firestore/lite";
+import { useEffect, useState } from "react";
+import { db } from "../../firebase";
+import { getCurSemester, getNextSemester, useFormState } from "../../utils";
 import DropdownMenu from "./DropdownMenu";
 import "./DropdownMenu.css";
 import FindTable from "./FindTable";
-import {
-  collection,
-  getDocs,
-  query,
-  where,
-  doc,
-  updateDoc,
-  QueryFieldFilterConstraint,
-} from "firebase/firestore/lite";
-import { getCurSemester, getNextSemester, useFormState } from "../../utils";
-import { db } from "../../firebase";
 
 const FindClasses = (props) => {
   const curUser = props.user;
@@ -75,6 +75,7 @@ const FindClasses = (props) => {
   const [selectedClasses, setSelectedClasses] = useState<Class[]>([]);
   const handleAddToRegistrationList = async () => {
     setLoading(true);
+    console.log(selectedClasses);
     try {
       if (selectedClasses.length > 0) {
         const userRef = doc(db, "users", curUser.uid);
@@ -83,9 +84,9 @@ const FindClasses = (props) => {
         });
         await updateDoc(userRef, {
           saved: [...curUser.saved, ...reFormatedSelectedClasses],
-        }).then(() => {
-          window.alert("Classes added to pre-registration list!");
         });
+
+        window.alert("Classes added to pre-registration list!");
       } else {
         console.log("No classes selected");
       }
