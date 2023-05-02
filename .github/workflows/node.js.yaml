@@ -27,8 +27,6 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
       - name: Install yarn
-        run: npm install -g yarn
-      - name: Running Unit Tests
+        run: yarn install --frozen-lockfile
+      - name: Run Tests
         run: yarn test
-      - name: Uninstall Yarn
-        run: npm uninstall -g yarn
