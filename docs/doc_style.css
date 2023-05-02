@@ -1,0 +1,62 @@
+.cspace{
+    color: white;
+    text-align: center;
+    font-size: 2.5rem;
+
+}
+.cspace:hover{
+    cursor: pointer;
+}
+.description{
+    opacity: 50%;
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+
+}
+.background_box{
+    position:absolute;
+    z-index: -10;
+    width: 100%; 
+    height: 23%;
+    left: 0px;
+    top: 0px;
+    background: linear-gradient(90.27deg, #155898 0%, #238f61 100%);
+}
+.subtitle{
+    margin-top: 5.5%;
+    color: #479c32be;
+    font-size: 1.6rem;
+    text-align: center;
+}
+.big_subtitle{
+    margin-top: 5.5%;
+    color: #479c32be;
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+.tstyle{
+    width: fit-content;
+    float: left;
+    margin: auto;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    opacity: 50%;
+  
+    color: white;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+.tstyle:hover{
+    cursor: pointer;
+}
+.words{
+    font-size: 1.1rem;
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
+}

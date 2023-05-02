@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<HTML>
+    <head>
+        <link rel="stylesheet" type="text/css" href="doc_style.css" />
+
+    </head>
+    <body>
+        <div class="background_box"></div>
+        <h1 class="cspace" type="button" onclick="window.location.href='doc_index.html';"> CSpace</h1>
+        <h4 class="description">Class and Schedule Registration Service</h4>
+        
+        <div class="container">
+            <div class="tstyle" type="button" onclick="window.location.href='dev_guide.html';">Technical Documentation</div>
+            <div class="tstyle" type="button" onclick="window.location.href='user_guide.html';">User Documentation</div>
+            <div class="tstyle" type="button"onclick="window.location.href='testing+issues.html';">Testing and Issues</div>
+            <div class="tstyle" type="button"onclick="window.location.href='team+progress.html';">Team and Process</div>
+            <div class="tstyle" type="button" onclick="window.location.href='https://github.com/csci-3321-swe-project/CatPaws/blob/main/docs/index.md';">View on GitHub</div>
+        </div>
+        <h3 class="subtitle"></h3>
+        <p class="words">
+            Upon opening the application, a user will see a login window. After submiting their username and password, or signing in via a google account, the user will be brought to either the student interface or teacher interface. 
+        </p>
+        <h3 class="big_subtitle">Student User Guide</h3>
+        <p class="words">
+            Upon logging in, students will be directed to their landing page, which displays the classes they are currently enrolled in. 
+            They can navigate between classes for the current semester and classes for the next semester by clicking on the buttons located above the table.
+        </p>
+        <p class="words">
+            There are two additional pages available for student use: "FIND CLASSES" and "REGISTRATION." 
+            From the "REGISTRATION" page, students can search for specific classes or groups of classes by using the drop-down and data entry fields. 
+            Once they have found a class or classes they want to register for, they must check the "Register" field and hit "Add to Registration List" located at the bottom of the page. 
+            This will add the selected classes to their registration list.
+        </p>
+        <p class="words">
+            Once all desired classes have been added to the registration list, students can navigate to the "REGISTRATION" page to complete the registration process. 
+            To register for the classes on the list, they must check the "Register" field next to each class and hit the "Register" button at the bottom of the page.
+        </p>
+        <p class="words">
+            **It's important to note that students should review their registration list carefully to ensure that the classes they have selected do not conflict with each other. 
+            Additionally, students must meet any prerequisites or eligibility requirements for the classes they wish to register for. 
+            CSpace does not have active checking for conflicts.
+        </p>
+        <h3 class="big_subtitle">Professor User Guide</h3>
+        <p class="words">
+            Upon logging in, teachers will be directed to their landing page, which displays the classes they are currently teaching and the classes they will teach next semester. 
+            To add or edit classes, teachers can navigate to the "CREATE CLASSES" and "EDIT CLASSES" pages.
+        </p>
+        <p class="words">
+            On the "CREATE CLASSES" page, teachers can create a new class by interacting with the drop-down and data entry fields. 
+            They can provide all the relevant information, such as course name, course code, class schedule, and any other required details. 
+            Similarly, on the "EDIT CLASSES" page, teachers can make changes to an existing class by selecting the class they want to edit.
+        </p>
+        <p class="words">
+            **Please note that teachers should double-check all the information entered before submitting it. 
+            Currently, CSpace does not offer data validation or checking, so it's crucial to ensure that all the information provided is accurate and complete.
+        </p>
+        <h3 class="big_subtitle">Administration User Guide</h3>
+        <h3 class="subtitle">Deploying Changes</h3>
+        <p class="words">
+            For advanced usage, once you have made all of the changes to the files you wish to make, you can deploy the changes to firebase by following the steps below.
+            Make sure you are in the cspace-firebase directory
+            Make sure you have NodeJS and firebase-tools installed and configured
+            Run npm start to make the changes to your firebase project
+        </p>
+        <h3 class="subtitle">Managing Users</h3>
+        <p class="words">
+            (Recommended) Add a user to firebase authentication via the firebase console, and if you do not wish to use the default user data, create an entry for the user in firestore users collection with the same uid.
+            Advanced Usage
+            Navigate to the cspace-firebase directory
+            Edit the students.json file to manage student users, following the examples provided in the file.
+            Edit the teachers.json file to manage student users, following the examples provided in the file.
+    </p>
+        <h3 class="subtitle">Managing Semesters</h3>
+        <p class="words">
+            (Recommended) Add a semester to firestore seasons collection via the firebase console, or edit the existing semesters.
+            Advanced Usage
+            Follow the example in the seasons.json file.
+            Note: The current semester that is displayed in the web app is determined by the end date in the seasons.json file.
+</p>
+        <h3 class="subtitle">Managing Classes</h3>
+        <p class="words">
+            (Recommended) Add a class to firestore classes collection via the firebase console, or edit the existing classes.
+            Advanced Usage
+            Follow the example in the classes.json file.
+            Edit the main.ts file in to manage which semesters are populated with the classes.
+</p>
+    </body>
+</HTML>

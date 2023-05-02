@@ -1,4 +1,5 @@
 {
+	"private": true,
 	"workspaces": [
 		"cspace-firebase",
 		"client"
@@ -6,9 +7,13 @@
 	"scripts": {
 		"build": "cd client && npm run build",
 		"dev": "cd client && npm run dev",
-		"deploy": "cd ./cspace-firebase && npm run deploy"
+		"deploy": "cd ./cspace-firebase && npm run deploy",
+		"test": "cd client && npm test"
 	},
 	"devDependencies": {
 		"typescript": "^5.0.2"
+	},
+	"dependencies": {
+		"firebase": "^9.21.0"
 	}
 }
