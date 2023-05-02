@@ -26,7 +26,5 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
-      - name: Setup yarn
-        run: yarn
-      - name: Run Tests
-        run: yarn test
+      - name: Run Jest
+        uses: stefanoeb/jest-action@1.0.3
