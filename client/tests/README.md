@@ -60,7 +60,7 @@ describe("Testing Utilities", ()=>{
 >These `it` blocks should make calls to the mocked functions defined above.
 
 ## Running the Tests
-Run `npm test` in the root directory to run all of your test suites. You can add arguments to the command using `-- --` after the command and before the argument with a space in between both. These arguments and info can be found on [Jest](https://jestjs.io/docs/cli).
+Run `npm test` in the root directory or in `client` to run all of your test suites. You can add arguments to the command using `-- --` in the root directory or `--` in `client` after the command and before the argument with a space in between both. These arguments and info can be found on [Jest](https://jestjs.io/docs/cli).
 
 ## Using Github Actions to Automate
 This service uses [Github Actions](https://docs.github.com/en/actions) to automate its tests. To update the automated actions performed, update the `node.js.yml` in the `github\workflows` folder. The traits needed for testing purposes are as following:
