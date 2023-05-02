@@ -26,6 +26,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
-      - name: Run Jest
-        run: cd client
-        uses: stefanoeb/jest-action@1.0.3
+      - name: Starting yarn
+        run: yarn
+      - name: Running Tests
+        run: yarn test
