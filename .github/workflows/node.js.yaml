@@ -28,8 +28,7 @@ jobs:
           cache: 'npm'
       - name: Install yarn
         run: npm install -g yarn
-      - name: "Running Unit Tests"
+      - name: Running Unit Tests
         run: yarn test
       - name: Uninstall Yarn
-        if: always()
         run: npm uninstall -g yarn
